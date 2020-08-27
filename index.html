@@ -1,0 +1,68 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	      href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab|Abril+Fatface&display=swap">
+<style>
+  html {
+	}
+	body {
+		padding: 0px;
+		margin: 0;
+		font-family: Roboto, Helvetica, Arial, sans-serif;
+		font-size: 13px;
+		color: #000000;
+		animation-name: background-color;
+		animation-duration: 67s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		animation-timing-function: ease; 
+	}
+	@keyframes background-color {
+		0% {background: #d2afea;}
+		16.67% {background: #779ecb;}
+		33.34% {background: #addfee;}
+		50% {background: #b5eeb9;}
+		66.67% {background: #fffda3;}
+		83.34% {background: #fbcea0;}
+		100% {background: #ffa3a3;}
+	}
+	.box {
+		width: 313px;
+		height: 67px;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-top: -34px;
+		margin-left: -157px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.gecko {
+		width: 313px;
+		height: 67px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -34px;
+		margin-left: -157px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		animation-name: title;
+		animation-duration: 3s;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes title {
+		0% {transform: rotate(-180deg); top: 124%; margin-top: 0px;}
+		100% {transform: rotate(0deg); top: 50%; margin-top: -50px}
+	}
+</style>
+</head>
+<body>
+	<div class="gecko">
+		<p align="center" style="font-family: Abril Fatface, Helvetica, Arial, sans-serif; font-size: 37; font-weight: bold;">gecko good luck</p>
+	</div>
+</body>
+</html>
