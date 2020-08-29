@@ -1,7 +1,7 @@
 <html>
 <head>
 	<link rel="stylesheet"
-	      href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab|Abril+Fatface&display=swap">
+	      href="https://fonts.googleapis.com/css?family=Roboto:normal,bold|Roboto+Slab:normal,bold|Abril+Fatface&display=swap">
 <style>
 	html {
 	}
@@ -15,7 +15,8 @@
 		animation-name: background-color;
 		animation-duration: 70s;
 		animation-iteration-count: infinite;
-		animation-timing-function: ease; 
+		animation-timing-function: ease;
+		animation-fill-mode: none;
 	}
 	@keyframes background-color {
 		0% {background: #d2afea;}
@@ -27,7 +28,7 @@
 		85.68% {background: #ffa3a3}
 		100% {background: #d2afea;}
 	}
-	.box {
+	.gecko {
 		width: 313px;
 		height: 67px;
 		position: fixed;
@@ -38,11 +39,20 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		animation-name: title-entrance;
+		animation-duration: 3s;
+		animation-timing-function: ease;
+		animation-fill-mode: none;
 	}
-	.gecko {
+	@keyframes title-entrance {
+		0% {transform: rotate(-180deg); top: 124%; margin-top: 0px;}
+		100% {transform: rotate(0deg); top: 50%; margin-top: -34px}
+	}
+	.goodluck {
 		width: 313px;
 		height: 67px;
-		position: absolute;
+		background: #000000;
+		position: fixed;
 		top: 50%;
 		left: 50%;
 		margin-top: -34px;
@@ -50,20 +60,28 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		animation-name: title;
+		animation-name: title-color;
 		animation-duration: 3s;
 		animation-timing-function: ease;
-		animation-fill-mode: forwards;
+		animation-fill-mode: none;
 	}
-	@keyframes title {
-		0% {transform: rotate(-180deg); top: 124%; margin-top: 0px;}
-		100% {transform: rotate(0deg); top: 50%; margin-top: -50px}
+	@keyframes title-color {
+		0% {color: #d2afea;}
+		14.28% {color: #779ecb;}
+		28.56% {color: #addfee;}
+		42.84% {color: #b5eeb9;}
+		57.12% {color: #fffda3;}
+		71.40% {color: #fbcea0;}
+		85.68% {color: #ffa3a3}
+		100% {color: #d2afea;}
 	}
 </style>
 </head>
 <body>
 	<div class="gecko">
-		<p align="center" style="font-family: Abril Fatface, Helvetica, Arial, sans-serif; font-size: 37; font-weight: bold;">gecko good luck</p>
+		<div class="goodluck">
+			<p align="center" style="font-family: Roboto Slab, Helvetica, Arial, sans-serif; font-size: 30; font-weight: normal;">gecko good luck ///</p>
+		</div>
 	</div>
 </body>
 </html>
