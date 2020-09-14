@@ -8,14 +8,6 @@
 <style>
 	html {
 	}
-	/* if using this font on the title, change font-size to 19px */
-	@font-face {
-		font-family: "Vulf Mono Italic";
-		src: url("fonts/VulfMonoItalic.woff") format("woff");
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
 	/* if using these fonts on the title, change font-size to 34px */
 	@font-face {
 		font-family: "IBM Selectric Light Regular";
@@ -67,12 +59,12 @@
 		align-items: center;
 		animation-name: title-entrance;
 		animation-duration: 3s;
-		animation-iteration-count: 1
+		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: none;
 	}
 	@keyframes title-entrance {
-		0% {transform: rotate(-180deg); top: 124%; margin-top: 0px;}
+		0% {transform: rotate(-90deg); top: 100%; margin-top: 0px;}
 		100% {transform: rotate(0deg); top: 50%; margin-top: -34px;}
 	}
 	.goodluck {
