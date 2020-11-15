@@ -48,7 +48,7 @@
 		animation-duration: 3s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease-out;
-		animation-fill-mode: none;
+		animation-fill-mode: forwards;
 	}
 	@keyframes title-entrance {
 		0% {transform: rotate(-133deg); top: 133%; margin-top: 0px;}
@@ -86,6 +86,7 @@
 		width: 313px;
 		height: 67px;
 		background: rgba(0, 0, 0, 0.67);
+		visibility: hidden;
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -95,15 +96,21 @@
 		justify-content: center;
 		align-items: center;
 		animation-name: upperbuttons-entrance;
+		animation-delay: 3s;
 		animation-duration: 1s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
-		animation-fill-mode: none;
+		animation-fill-mode: forwards;
+	}
+	@keyframes upperbuttons-entrance {
+		0% {visibility: visible; top: 50%; margin-top: -34px;}
+		100% {visibility: visible; top: 50%; margin-top: -101px;}
 	}
 	.lowerbuttons {
 		width: 313px;
 		height: 67px;
 		background: rgba(0, 0, 0, 0.67);
+		visibility: hidden;
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -113,15 +120,22 @@
 		justify-content: center;
 		align-items: center;
 		animation-name: lowerbuttons-entrance;
+		animation-delay: 3s;
 		animation-duration: 1s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
-		animation-fill-mode: none;
+		animation-fill-mode: forwards;
+	}
+	@keyframes upperbuttons-entrance {
+		0% {visibility: visible; top: 50%; margin-top: -34px;}
+		100% {visibility: visible; top: 50%; margin-top: 33px;}
 	}
 </style>
 </head>
 <body>
 	<div class="box">
+		<div class="upperbuttons"></div>
+		<div class="lowerbuttons"></div>
 		<div class="title">
 			<p align="center" style="font-family: Zilla Slab, Helvetica, Arial, sans-serif; font-size: 34px; font-weight: 300; line-height: 1"><i>gecko good luck <span style="letter-spacing: 3">///</span></i></p>
 		</div>
