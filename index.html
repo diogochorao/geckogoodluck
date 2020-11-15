@@ -33,14 +33,13 @@
 		85.68% {background: #ffa3a3;}
 		100% {background: #d2afea;}
 	}
-	.gecko {
+	.box {
 		width: 313px;
-		height: 67px;
-		background: rgba(0, 0, 0, 1);
+		height: 201px;
 		position: fixed;
 		top: 50%;
 		left: 50%;
-		margin-top: -34px;
+		margin-top: -101px;
 		margin-left: -157px;
 		display: flex;
 		justify-content: center;
@@ -53,11 +52,12 @@
 	}
 	@keyframes title-entrance {
 		0% {transform: rotate(-133deg); top: 133%; margin-top: 0px;}
-		100% {transform: rotate(0deg); top: 50%; margin-top: -34px;}
+		100% {transform: rotate(0deg); top: 50%; margin-top: -101px;}
 	}
-	.goodluck {
+	.title {
 		width: 313px;
 		height: 67px;
+		background: rgba(0, 0, 0, 1);
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -82,11 +82,47 @@
 		85.68% {color: #ffa3a3;}
 		100% {color: #d2afea;}
 	}
+	.upperbuttons {
+		width: 313px;
+		height: 67px;
+		background: rgba(0, 0, 0, 0.67);
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-top: -101px;
+		margin-left: -157px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		animation-name: upperbuttons-entrance;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: none;
+	}
+	.lowerbuttons {
+		width: 313px;
+		height: 67px;
+		background: rgba(0, 0, 0, 0.67);
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-top: 33px;
+		margin-left: -157px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		animation-name: lowerbuttons-entrance;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: none;
+	}
 </style>
 </head>
 <body>
-	<div class="gecko">
-		<div class="goodluck">
+	<div class="box">
+		<div class="title">
 			<p align="center" style="font-family: Zilla Slab, Helvetica, Arial, sans-serif; font-size: 34px; font-weight: 300; line-height: 1"><i>gecko good luck <span style="letter-spacing: 3">///</span></i></p>
 		</div>
 	</div>
