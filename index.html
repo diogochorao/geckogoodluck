@@ -36,13 +36,13 @@
 		100% {background: #d2afea;}
 	}
 	.box {
-		width: 313px;
+		width: 447px;
 		height: 151px;
 		position: fixed;
 		top: 50%;
 		left: 50%;
 		margin-top: -76px;
-		margin-left: -157px;
+		margin-left: -224px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -84,13 +84,41 @@
 		85.68% {color: #ffa3a3;}
 		100% {color: #d2afea;}
 	}
+	.leftcover {
+		width: 67px;
+		height: 67px;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-top: -34px;
+		margin-left: -224px;
+		animation-name: background-color;
+		animation-duration: 49s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease;
+		animation-fill-mode: none;
+	}
+	.rightcover {
+		width: 67px;
+		height: 67px;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-top: -34px;
+		margin-left: 156px;
+		animation-name: background-color;
+		animation-duration: 49s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease;
+		animation-fill-mode: none;
+	}
 	@keyframes upperbuttons-entrance {
-		0% {visibility: visible; opacity: 0; margin-top: -17px; transform: rotate(-25deg);}
-		100% {visibility: visible; opacity: 1; margin-top: -76px;}
+		0% {visibility: visible; margin-top: -17px; transform: rotate(-25deg);}
+		100% {visibility: visible; margin-top: -76px;}
 	}
 	@keyframes lowerbuttons-entrance {
-		0% {visibility: visible; opacity: 0; margin-top: -17px; transform: rotate(-25deg);}
-		100% {visibility: visible; opacity: 1; margin-top: 41px;}
+		0% {visibility: visible; margin-top: -17px; transform: rotate(-25deg);}
+		100% {visibility: visible; margin-top: 41px;}
 	}
 	.spotify {
 		width: 99px;
