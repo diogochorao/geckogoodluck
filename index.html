@@ -37,11 +37,11 @@
 	}
 	.box {
 		width: 447px;
-		height: 151px;
+		height: 100%;
 		position: fixed;
-		top: 50%;
+		top: 0%;
 		left: 50%;
-		margin-top: -76px;
+		margin-top: 0px;
 		margin-left: -224px;
 		display: flex;
 		justify-content: center;
@@ -53,8 +53,8 @@
 		animation-fill-mode: forwards;
 	}
 	@keyframes title-entrance {
-		0% {transform: rotate(-133deg); top: 133%; margin-top: 0px;}
-		100% {transform: rotate(0deg); top: 50%; margin-top: -76px;}
+		0% {transform: rotate(-133deg); top: 133%;}
+		100% {transform: rotate(0deg); top: 0%;}
 	}
 	.titlebox {
 		width: 313px;
@@ -108,6 +108,18 @@
 		13.95% {margin-left: -50px;}
 		83.72% {margin-left: -50px;}
 		100% {margin-left: -157px;}
+	}
+	.ettitle {
+		animation-name: et-title;
+		animation-duration: 1.9s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes et-title {
+		0% {top: 50%; margin-top: -34px;}
+		13.95% {top: 50%; margin-top: 24px;}
+		100% {top: 0%; margin-top: 16px;}
 	}
 	.leftcover {
 		width: 67px;
@@ -319,7 +331,7 @@
 </head>
 <body>
 	<div class="box">
-		<div class="spotify"><p>spotify</p></div><div class="youtube"><p>youtube</p></div><div class="everywhere"><p>everywhere</p></div>
+		<div class="spotify"><p>spotify</p></div><div class="youtube"><p>youtube</p></div><div class="everywhere" onclick="everywheretransition()"><p>everywhere</p></div>
 		<div class="instagram"><p>instagram</p></div><div class="contact"><p>contact</p></div><div class="website"><p>...</p></div>
 		<div class="leftcover"></div><div class="rightcover"></div>
 		<div class="titlebox" id="titlebox" onclick="geckoreveal()"><div class="title">
@@ -331,6 +343,10 @@
 function geckoreveal() {
    var element = document.getElementById("titlebox");
    element.classList.add("geckoreveal");
+}
+function everywheretransition() {
+   var element = document.getElementById("titlebox");
+   element.classList.add("ettitle");
 }
 </script>
 </body>
