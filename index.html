@@ -111,14 +111,14 @@
 	}
 	.ettitle {
 		animation-name: et-title;
-		animation-duration: 1.9s;
+		animation-duration: 1.2s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
 	@keyframes et-title {
 		0% {top: 50%; margin-top: -34px;}
-		13.95% {top: 50%; margin-top: 24px;}
+		25% {top: 50%; margin-top: 24px;}
 		100% {top: 0%; margin-top: 16px;}
 	}
 	.leftcover {
@@ -327,12 +327,26 @@
 	.website:hover {
 		background: rgba(0, 0, 0, 0.07);
 	}
+	.etlowerbuttons {
+		animation-name: et-lowerbuttons;
+		animation-delay: 0s;
+		animation-duration: 0.6s;
+		animation-iteration-count: 1;
+		animation-timing-function: linear;
+		animation-fill-mode: forwards;
+	}
+	@keyframes et-lowerbuttons {
+		0% {visibility: visible;}
+		50% {visibility: visible;}
+		50.01% {visibility: hidden;}
+		100% {visibility: hidden;}
+	}
 </style>
 </head>
 <body>
 	<div class="box">
 		<div class="spotify"><p>spotify</p></div><div class="youtube"><p>youtube</p></div><div class="everywhere" onclick="everywheretransition()"><p>everywhere</p></div>
-		<div class="instagram"><p>instagram</p></div><div class="contact"><p>contact</p></div><div class="website"><p>...</p></div>
+		<div class="instagram" id="instagram">><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="website" id="website"><p>...</p></div>
 		<div class="leftcover"></div><div class="rightcover"></div>
 		<div class="titlebox" id="titlebox" onclick="geckoreveal()"><div class="title">
 			<p style="font-size: 34px">gecko good luck <span style="letter-spacing: 3">///</span></p>
@@ -347,6 +361,12 @@ function geckoreveal() {
 function everywheretransition() {
    var element = document.getElementById("titlebox");
    element.classList.add("ettitle");
+   var element = document.getElementById("instagram");
+   element.classList.add("etlowerbuttons");
+   var element = document.getElementById("contact");
+   element.classList.add("etlowerbuttons");
+   var element = document.getElementById("website");
+   element.classList.add("etlowerbuttons");
 }
 </script>
 </body>
