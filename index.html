@@ -109,18 +109,6 @@
 		83.72% {margin-left: -50px;}
 		100% {margin-left: -157px;}
 	}
-	.ettitle {
-		animation-name: et-title;
-		animation-duration: 1.2s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes et-title {
-		0% {top: 50%; margin-top: -34px;}
-		25% {top: 50%; margin-top: 24px;}
-		100% {top: 0%; margin-top: clamp(16px, calc((100vw - 313px) / 2), 34px);}
-	}
 	.leftcover {
 		width: 67px;
 		height: 67px;
@@ -162,6 +150,8 @@
 		height: 34px;
 		visibility: hidden;
 		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -185,12 +175,15 @@
 	}
 	.spotify:hover {
 		background: rgba(0, 0, 0, 0.07);
+		border: 1px dashed rgba(0, 0, 0, 0.34);
 	}
 	.youtube {
 		width: 99px;
 		height: 34px;
 		visibility: hidden;
 		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -213,12 +206,15 @@
 	}
 	.youtube:hover {
 		background: rgba(0, 0, 0, 0.07);
+		border: 1px dashed rgba(0, 0, 0, 0.34);
 	}
 	.everywhere {
 		width: 99px;
 		height: 34px;
 		visibility: hidden;
 		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -241,12 +237,15 @@
 	}
 	.everywhere:hover {
 		background: rgba(0, 0, 0, 0.07);
+		border: 1px dashed rgba(0, 0, 0, 0.34);
 	}
 	.instagram {
 		width: 99px;
 		height: 34px;
 		visibility: hidden;
 		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -270,12 +269,15 @@
 	}
 	.instagram:hover {
 		background: rgba(0, 0, 0, 0.07);
+		border: 1px dashed rgba(0, 0, 0, 0.34);
 	}
 	.contact {
 		width: 99px;
 		height: 34px;
 		visibility: hidden;
 		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -298,12 +300,15 @@
 	}
 	.contact:hover {
 		background: rgba(0, 0, 0, 0.07);
+		border: 1px dashed rgba(0, 0, 0, 0.34);
 	}
 	.website {
 		width: 99px;
 		height: 34px;
 		visibility: hidden;
 		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -326,6 +331,19 @@
 	}
 	.website:hover {
 		background: rgba(0, 0, 0, 0.07);
+		border: 1px dashed rgba(0, 0, 0, 0.34);
+	}
+	.ettitle {
+		animation-name: et-title;
+		animation-duration: 1.2s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes et-title {
+		0% {top: 50%; margin-top: -34px;}
+		25% {top: 50%; margin-top: 24px;}
+		100% {top: 0%; margin-top: clamp(16px, calc((100vw - 313px) / 2), 34px);}
 	}
 	.etupperbuttons {
 		animation-name: et-upperbuttons;
