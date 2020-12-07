@@ -153,6 +153,7 @@
 		box-sizing: border-box;
 		border: 1px dashed rgba(0, 0, 0, 0);
 		cursor: pointer;
+		overflow: hidden;
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -174,9 +175,30 @@
 		37.5% {visibility: visible; margin-top: -17px; margin-left: -157px; transform: rotate(-19deg);}
 		100% {visibility: visible; margin-top: -76px;}
 	}
+	.spotify span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.spotify span:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
 	.spotify:hover {
-		background: rgba(0, 0, 0, 0.07);
 		border: 1px dashed rgba(0, 0, 0, 0.34);
+	}
+	.spotify:hover span {
+		padding-left: 18px;
+	}
+	.spotify:hover span:before {
+		opacity: 1;
+		left: 0;
 	}
 	.youtube {
 		width: 99px;
@@ -186,6 +208,7 @@
 		box-sizing: border-box;
 		border: 1px dashed rgba(0, 0, 0, 0);
 		cursor: pointer;
+		overflow: hidden;
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -206,9 +229,30 @@
 		0% {visibility: visible; margin-top: -17px; transform: rotate(-19deg);}
 		100% {visibility: visible; margin-top: -76px;}
 	}
+	.youtube span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.youtube span:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
 	.youtube:hover {
-		background: rgba(0, 0, 0, 0.07);
 		border: 1px dashed rgba(0, 0, 0, 0.34);
+	}
+	.youtube:hover span {
+		padding-left: 18px;
+	}
+	.youtube:hover span:before {
+		opacity: 1;
+		left: 0;
 	}
 	.everywhere {
 		width: 99px;
@@ -218,6 +262,7 @@
 		box-sizing: border-box;
 		border: 1px dashed rgba(0, 0, 0, 0);
 		cursor: pointer;
+		overflow: hidden;
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -238,9 +283,30 @@
 		0% {visibility: visible; margin-top: -17px; transform: rotate(-19deg);}
 		100% {visibility: visible; margin-top: -76px;}
 	}
+	.everywhere span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.everywhere span:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
 	.everywhere:hover {
-		background: rgba(0, 0, 0, 0.07);
 		border: 1px dashed rgba(0, 0, 0, 0.34);
+	}
+	.everywhere:hover span {
+		padding-left: 18px;
+	}
+	.everywhere:hover span:before {
+		opacity: 1;
+		left: 0;
 	}
 	.instagram {
 		width: 99px;
@@ -250,6 +316,7 @@
 		box-sizing: border-box;
 		border: 1px dashed rgba(0, 0, 0, 0);
 		cursor: pointer;
+		overflow: hidden;
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -271,9 +338,30 @@
 		37.5% {visibility: visible; margin-top: -17px; margin-left: -157px; transform: rotate(19deg);}
 		100% {visibility: visible; margin-top: 41px;}
 	}
+	.instagram span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.instagram span:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
 	.instagram:hover {
-		background: rgba(0, 0, 0, 0.07);
 		border: 1px dashed rgba(0, 0, 0, 0.34);
+	}
+	.instagram:hover span {
+		padding-left: 18px;
+	}
+	.instagram:hover span:before {
+		opacity: 1;
+		left: 0;
 	}
 	.contact {
 		width: 99px;
@@ -283,6 +371,7 @@
 		box-sizing: border-box;
 		border: 1px dashed rgba(0, 0, 0, 0);
 		cursor: pointer;
+		overflow: hidden;
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -303,9 +392,30 @@
 		0% {visibility: visible; margin-top: -17px; transform: rotate(19deg);}
 		100% {visibility: visible; margin-top: 41px;}
 	}
+	.contact span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.contact span:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
 	.contact:hover {
-		background: rgba(0, 0, 0, 0.07);
 		border: 1px dashed rgba(0, 0, 0, 0.34);
+	}
+	.contact:hover span {
+		padding-left: 18px;
+	}
+	.contact:hover span:before {
+		opacity: 1;
+		left: 0;
 	}
 	.website {
 		width: 99px;
@@ -315,6 +425,7 @@
 		box-sizing: border-box;
 		border: 1px dashed rgba(0, 0, 0, 0);
 		cursor: pointer;
+		overflow: hidden;
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -335,9 +446,30 @@
 		0% {visibility: visible; margin-top: -17px; transform: rotate(19deg);}
 		100% {visibility: visible; margin-top: 41px;}
 	}
+	.website span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.website span:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
 	.website:hover {
-		background: rgba(0, 0, 0, 0.07);
 		border: 1px dashed rgba(0, 0, 0, 0.34);
+	}
+	.website:hover span {
+		padding-left: 18px;
+	}
+	.website:hover span:before {
+		opacity: 1;
+		left: 0;
 	}
 	.ettitle {
 		animation-name: et-title;
@@ -381,8 +513,8 @@
 </head>
 <body>
 	<div class="box">
-		<div class="spotify" id="spotify"><p>spotify</p></div><div class="youtube" id="youtube"><p>youtube</p></div><div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p></div>
-		<div class="instagram" id="instagram"><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="website" id="website"><p>...</p></div>
+		<div class="spotify" id="spotify"><span>spotify</span></div><div class="youtube" id="youtube"><span>youtube</span></div><div class="everywhere" id="everywhere" onclick="everywheretransition()"><span>everywhere</span></div>
+		<div class="instagram" id="instagram"><span>instagram</span></div><div class="contact" id="contact"><span>contact</span></div><div class="website" id="website"><span>...</span></div>
 		<div class="leftcover"></div><div class="rightcover"></div>
 		<div class="titlebox" id="titlebox" onclick="geckoreveal()"><div class="title">
 			<p style="font-size: 34px">gecko good luck <span style="letter-spacing: 3">///</span></p>
