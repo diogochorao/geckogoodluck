@@ -77,6 +77,8 @@
 		left: 50%;
 		margin-top: -34px;
 		margin-left: -157px;
+		font-size: 34px;
+		overflow: hidden;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -95,6 +97,27 @@
 		71.40% {color: #fbcea0;}
 		85.68% {color: #ffa3a3;}
 		100% {color: #d2afea;}
+	}
+	.title span {
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.title span:after {
+		content: '///';
+		letter-spacing: 3;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		right: -43px;
+		transition: 0.7s;
+	}
+	.title:hover span {
+		padding-right: 43px;
+	}
+	.title:hover span:after {
+		opacity: 1;
+		right: 0;
 	}
 	.geckoreveal {
 		animation-name: gecko-reveal;
@@ -499,7 +522,7 @@
 		<div class="instagram" id="instagram"><span>instagram</span></div><div class="contact" id="contact"><span>contact</span></div><div class="website" id="website"><span>...</span></div>
 		<div class="leftcover"></div><div class="rightcover"></div>
 		<div class="titlebox" id="titlebox" onclick="geckoreveal()"><div class="title">
-			<p style="font-size: 34px">gecko good luck <span style="letter-spacing: 3">///</span></p>
+			<span>gecko good luck</span>
 		</div></div>
 	</div>
 
