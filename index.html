@@ -446,7 +446,7 @@
 		transition: 0s;
 		background: rgba(0, 0, 0, 0.16);
 	}
-	.website {
+	.whither {
 		width: 99px;
 		height: 34px;
 		visibility: hidden;
@@ -464,24 +464,24 @@
 		justify-content: center;
 		align-items: center;
 		transition: 0.7s;
-		animation-name: website-entrance;
+		animation-name: whither-entrance;
 		animation-delay: 4.5s;
 		animation-duration: 1s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	@keyframes website-entrance {
+	@keyframes whither-entrance {
 		0% {visibility: visible; margin-top: -17px; transform: rotate(19deg);}
 		100% {visibility: visible; margin-top: 41px;}
 	}
-	.website span {
+	.whither span {
 		cursor: pointer;
 		display: inline-block;
 		position: relative;
 		transition: 0.7s;
 	}
-	.website span:before {
+	.whither span:before {
 		content: '///';
 		letter-spacing: 1.5;
 		position: absolute;
@@ -490,14 +490,14 @@
 		left: -18px;
 		transition: 0.7s;
 	}
-	.website:hover span {
+	.whither:hover span {
 		padding-left: 18px;
 	}
-	.website:hover span:before {
+	.whither:hover span:before {
 		opacity: 1;
 		left: 0;
 	}
-	.website:active {
+	.whither:active {
 		transition: 0s;
 		background: rgba(0, 0, 0, 0.16);
 	}
@@ -544,7 +544,7 @@
 <body>
 	<div class="box">
 		<div class="spotify" id="spotify"><span>spotify</span></div><div class="youtube" id="youtube"><span>youtube</span></div><div class="everywhere" id="everywhere" onclick="everywheretransition()"><span>everywhere</span></div>
-		<div class="instagram" id="instagram"><span>instagram</span></div><div class="contact" id="contact"><span>contact</span></div><div class="website" id="website"><span>...</span></div>
+		<div class="instagram" id="instagram"><span>instagram</span></div><div class="contact" id="contact"><span>contact</span></div><div class="whither" id="whither"><span>...</span></div>
 		<div class="leftcover"></div><div class="rightcover"></div>
 		<div class="titlebox" id="titlebox" onclick="geckoreveal()"><div class="title">
 			<span>gecko good luck</span>
@@ -575,7 +575,7 @@ function everywheretransition() {
    element.classList.add("etlowerbuttons");
    var element = document.getElementById("contact");
    element.classList.add("etlowerbuttons");
-   var element = document.getElementById("website");
+   var element = document.getElementById("whither");
    element.classList.add("etlowerbuttons");
 }
 </script>
