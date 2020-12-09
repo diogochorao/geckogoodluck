@@ -99,12 +99,12 @@
 		85.68% {color: #ffa3a3;}
 		100% {color: #d2afea;}
 	}
-	.title span {
+	.title p {
 		display: inline-block;
 		position: relative;
 		transition: 0.7s;
 	}
-	.title span:after {
+	.title p:after {
 		content: '///';
 		letter-spacing: 3;
 		position: absolute;
@@ -113,10 +113,10 @@
 		right: -43px;
 		transition: 0.7s;
 	}
-	.title:hover span {
+	.title:hover p {
 		padding-right: 43px;
 	}
-	.title:hover span:after {
+	.title:hover p:after {
 		opacity: 1;
 		right: 0;
 	}
@@ -199,13 +199,13 @@
 		37.5% {visibility: visible; margin-top: -17px; margin-left: -157px; transform: rotate(-19deg);}
 		100% {visibility: visible; margin-top: -76px;}
 	}
-	.spotify span {
+	.spotify p {
 		cursor: pointer;
 		display: inline-block;
 		position: relative;
 		transition: 0.7s;
 	}
-	.spotify span:before {
+	.spotify p:before {
 		content: '///';
 		letter-spacing: 1.5;
 		position: absolute;
@@ -214,10 +214,10 @@
 		left: -18px;
 		transition: 0.7s;
 	}
-	.spotify:hover span {
+	.spotify:hover p {
 		padding-left: 18px;
 	}
-	.spotify:hover span:before {
+	.spotify:hover p:before {
 		opacity: 1;
 		left: 0;
 	}
@@ -254,13 +254,13 @@
 		0% {visibility: visible; margin-top: -17px; transform: rotate(-19deg);}
 		100% {visibility: visible; margin-top: -76px;}
 	}
-	.youtube span {
+	.youtube p {
 		cursor: pointer;
 		display: inline-block;
 		position: relative;
 		transition: 0.7s;
 	}
-	.youtube span:before {
+	.youtube p:before {
 		content: '///';
 		letter-spacing: 1.5;
 		position: absolute;
@@ -269,10 +269,10 @@
 		left: -18px;
 		transition: 0.7s;
 	}
-	.youtube:hover span {
+	.youtube:hover p {
 		padding-left: 18px;
 	}
-	.youtube:hover span:before {
+	.youtube:hover p:before {
 		opacity: 1;
 		left: 0;
 	}
@@ -309,13 +309,13 @@
 		0% {visibility: visible; margin-top: -17px; transform: rotate(-19deg);}
 		100% {visibility: visible; margin-top: -76px;}
 	}
-	.everywhere span {
+	.everywhere p {
 		cursor: pointer;
 		display: inline-block;
 		position: relative;
 		transition: 0.7s;
 	}
-	.everywhere span:before {
+	.everywhere p:before {
 		content: '///';
 		letter-spacing: 1.2;
 		position: absolute;
@@ -324,10 +324,10 @@
 		left: -16px;
 		transition: 0.7s;
 	}
-	.everywhere:hover span {
+	.everywhere:hover p {
 		padding-left: 16px;
 	}
-	.everywhere:hover span:before {
+	.everywhere:hover p:before {
 		opacity: 1;
 		left: 0;
 	}
@@ -365,13 +365,13 @@
 		37.5% {visibility: visible; margin-top: -17px; margin-left: -157px; transform: rotate(19deg);}
 		100% {visibility: visible; margin-top: 41px;}
 	}
-	.instagram span {
+	.instagram p {
 		cursor: pointer;
 		display: inline-block;
 		position: relative;
 		transition: 0.7s;
 	}
-	.instagram span:before {
+	.instagram p:before {
 		content: '///';
 		letter-spacing: 1.5;
 		position: absolute;
@@ -380,10 +380,10 @@
 		left: -18px;
 		transition: 0.7s;
 	}
-	.instagram:hover span {
+	.instagram:hover p {
 		padding-left: 18px;
 	}
-	.instagram:hover span:before {
+	.instagram:hover p:before {
 		opacity: 1;
 		left: 0;
 	}
@@ -420,13 +420,13 @@
 		0% {visibility: visible; margin-top: -17px; transform: rotate(19deg);}
 		100% {visibility: visible; margin-top: 41px;}
 	}
-	.contact span {
+	.contact p {
 		cursor: pointer;
 		display: inline-block;
 		position: relative;
 		transition: 0.7s;
 	}
-	.contact span:before {
+	.contact p:before {
 		content: '///';
 		letter-spacing: 1.5;
 		position: absolute;
@@ -435,10 +435,10 @@
 		left: -18px;
 		transition: 0.7s;
 	}
-	.contact:hover span {
+	.contact:hover p {
 		padding-left: 18px;
 	}
-	.contact:hover span:before {
+	.contact:hover p:before {
 		opacity: 1;
 		left: 0;
 	}
@@ -475,13 +475,13 @@
 		0% {visibility: visible; margin-top: -17px; transform: rotate(19deg);}
 		100% {visibility: visible; margin-top: 41px;}
 	}
-	.whither span {
+	.whither p {
 		cursor: pointer;
 		display: inline-block;
 		position: relative;
 		transition: 0.7s;
 	}
-	.whither span:before {
+	.whither p:before {
 		content: '///';
 		letter-spacing: 1.5;
 		position: absolute;
@@ -490,10 +490,10 @@
 		left: -18px;
 		transition: 0.7s;
 	}
-	.whither:hover span {
+	.whither:hover p {
 		padding-left: 18px;
 	}
-	.whither:hover span:before {
+	.whither:hover p:before {
 		opacity: 1;
 		left: 0;
 	}
@@ -543,19 +543,13 @@
 </head>
 <body>
 	<div class="box">
-		<div class="spotify" id="spotify"><span>spotify</span></div><div class="youtube" id="youtube"><span>youtube</span></div><div class="everywhere" id="everywhere" onclick="everywheretransition()"><span>everywhere</span></div>
-		<div class="instagram" id="instagram"><span>instagram</span></div><div class="contact" id="contact"><span>contact</span></div><div class="whither" id="whither"><span>...</span></div>
+		<div class="spotify" id="spotify"><p>spotify</p></div><div class="youtube" id="youtube"><p>youtube</p></div><div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p></div>
+		<div class="instagram" id="instagram"><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="whither" id="whither"><p>...</p></div>
 		<div class="leftcover"></div><div class="rightcover"></div>
 		<div class="titlebox" id="titlebox" onclick="geckoreveal()"><div class="title">
-			<span>gecko good luck</span>
+			<p>gecko good luck</p>
 		</div></div>
 	</div>
-
-<p style="display: none">/* EVERYWHERE NOTES */
-if your preferred music streaming service isn't linked here, just open it up and search "gecko good luck"! we're probably on it too.
-our music is also available to use on instagram (for stories and reels), snapchat, and tiktok! just search "gecko good luck".
-you can also use our songs in your youtube videos if you want! just credit us in the description and you're good to go.
-</p>
 
 <script>
 function geckoreveal() {
