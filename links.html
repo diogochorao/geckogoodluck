@@ -110,6 +110,172 @@
 		opacity: 1;
 		right: 0;
 	}
+	.spotify {
+		width: 99px;
+		height: 34px;
+		visibility: hidden;
+		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
+		cursor: pointer;
+		overflow: hidden;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-top: -76px;
+		margin-left: -157px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.7s;
+		animation-name: spotify-entrance;
+		animation-delay: 2.4s;
+		animation-duration: 1.6s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes spotify-entrance {
+		0% {visibility: visible; margin-top: -17px; margin-left: 0px;}
+		37.5% {visibility: visible; margin-top: -17px; margin-left: -157px; transform: rotate(-19deg);}
+		100% {visibility: visible; margin-top: -76px;}
+	}
+	.spotify span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.spotify span:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
+	.spotify:hover span {
+		padding-left: 18px;
+	}
+	.spotify:hover span:before {
+		opacity: 1;
+		left: 0;
+	}
+	.spotify:active {
+		transition: 0s;
+		background: rgba(0, 0, 0, 0.19);
+	}
+	.youtube {
+		width: 99px;
+		height: 34px;
+		visibility: hidden;
+		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
+		cursor: pointer;
+		overflow: hidden;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-top: -76px;
+		margin-left: -50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.7s;
+		animation-name: youtube-entrance;
+		animation-delay: 3.3s;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes youtube-entrance {
+		0% {visibility: visible; margin-top: -17px; transform: rotate(-19deg);}
+		100% {visibility: visible; margin-top: -76px;}
+	}
+	.youtube span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.youtube span:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
+	.youtube:hover span {
+		padding-left: 18px;
+	}
+	.youtube:hover span:before {
+		opacity: 1;
+		left: 0;
+	}
+	.youtube:active {
+		transition: 0s;
+		background: rgba(0, 0, 0, 0.19);
+	}
+	.everywhere {
+		width: 99px;
+		height: 34px;
+		visibility: hidden;
+		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
+		cursor: pointer;
+		overflow: hidden;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-top: -76px;
+		margin-left: 57px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.7s;
+		animation-name: everywhere-entrance;
+		animation-delay: 3.6s;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes everywhere-entrance {
+		0% {visibility: visible; margin-top: -17px; transform: rotate(-19deg);}
+		100% {visibility: visible; margin-top: -76px;}
+	}
+	.everywhere span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.everywhere span:before {
+		content: '///';
+		letter-spacing: 1.2;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -16px;
+		transition: 0.7s;
+	}
+	.everywhere:hover span {
+		padding-left: 16px;
+	}
+	.everywhere:hover span:before {
+		opacity: 1;
+		left: 0;
+	}
+	.everywhere:active {
+		transition: 0s;
+		background: rgba(0, 0, 0, 0.19);
+	}
 </style>
 </head>
 <body>
@@ -119,7 +285,10 @@
 		</div></div>
 	</div>
 
-<p style="display: none">/* EVERYWHERE NOTES */
+<p style="display: none">/* EVERYWHERE LINKS & NOTES */
+spotify, apple music, amazon music
+youtube music, soundcloud, bandcamp
+tidal
 if your preferred music streaming service isn't linked here, just open it up and search "gecko good luck"! we're probably on it too.
 our music is also available to use on instagram (for stories and reels), snapchat, and tiktok! just search "gecko good luck".
 you can also use our songs in your youtube videos if you want! just credit us in the description and you're good to go.
