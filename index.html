@@ -83,11 +83,37 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+	.title p {
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
 		animation-name: title-color;
 		animation-duration: 49s;
 		animation-iteration-count: infinite;
 		animation-timing-function: ease;
 		animation-fill-mode: none;
+	}
+	.title p:after {
+		content: '///';
+		letter-spacing: 3;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		right: -43px;
+		transition: 0.7s;
+		animation-name: title-color;
+		animation-duration: 49s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease;
+		animation-fill-mode: none;
+	}
+	.title:hover p {
+		padding-right: 43px;
+	}
+	.title:hover p:after {
+		opacity: 1;
+		right: 0;
 	}
 	@keyframes title-color {
 		0% {color: #d2afea;}
@@ -98,27 +124,6 @@
 		71.40% {color: #fbcea0;}
 		85.68% {color: #ffa3a3;}
 		100% {color: #d2afea;}
-	}
-	.title p {
-		display: inline-block;
-		position: relative;
-		transition: 0.7s;
-	}
-	.title p:after {
-		content: '///';
-		letter-spacing: 3;
-		position: absolute;
-		opacity: 0;
-		top: 0;
-		right: -43px;
-		transition: 0.7s;
-	}
-	.title:hover p {
-		padding-right: 43px;
-	}
-	.title:hover p:after {
-		opacity: 1;
-		right: 0;
 	}
 	.geckoreveal {
 		animation-name: gecko-reveal;
