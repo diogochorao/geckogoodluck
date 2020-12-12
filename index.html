@@ -83,45 +83,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	}
-	.title p {
-		display: inline-block;
-		position: relative;
-		transition: 0.7s 49s;
-		animation-name: title-color;
-		animation-duration: 49s;
-		animation-iteration-count: infinite;
-		animation-timing-function: ease;
-		animation-fill-mode: none;
-	}
-	.title p:after {
-		content: '///';
-		letter-spacing: 3;
-		position: absolute;
-		opacity: 1;
-		top: -46px;
-		right: -46px;
-		transition: 0.7s 49s;
-		animation-name: title-color;
-		animation-duration: 49s;
-		animation-iteration-count: infinite;
-		animation-timing-function: ease;
-		animation-fill-mode: none;
-	}
-	.title:hover p {
-		padding-right: 43px;
-		transition: 0.7s;
-		animation-name: title-color;
-		animation-duration: 49s;
-		animation-iteration-count: infinite;
-		animation-timing-function: ease;
-		animation-fill-mode: none;
-	}
-	.title:hover p:after {
-		opacity: 1;
-		top: 0;
-		right: 0;
-		transition: 0.7s;
 		animation-name: title-color;
 		animation-duration: 49s;
 		animation-iteration-count: infinite;
@@ -137,6 +98,42 @@
 		71.40% {color: #fbcea0;}
 		85.68% {color: #ffa3a3;}
 		100% {color: #d2afea;}
+	}
+	.titletext {
+		position: absolute;
+	}
+	.titlehovertext {
+		animation-name: title-hover-text;
+		animation-duration: 0.7s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes title-hover-text {
+		0% {padding-right: 0px;}
+		100% {padding-right: 43px;}
+	}
+	.titleslashes {
+		width: 67px;
+		height: 67px;
+		position: absolute;
+		top: -46px;
+		right: -12px;
+		letter-spacing: 3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.titlehoverslashes {
+		animation-name: title-hover-slashes;
+		animation-duration: 0.7s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes title-hover-slashes {
+		0% {top: -46px; right: -12px;}
+		100% {top: 0px; right: 11px;}
 	}
 	.geckoreveal {
 		animation-name: gecko-reveal;
@@ -564,12 +561,18 @@
 		<div class="spotify" id="spotify"><p>spotify</p></div><div class="youtube" id="youtube"><p>youtube</p></div><div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p></div>
 		<div class="instagram" id="instagram"><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="whither" id="whither"><p>...</p></div>
 		<div class="leftcover"></div><div class="rightcover"></div>
-		<div class="titlebox" id="titlebox" onclick="geckoreveal()"><div class="title">
-			<p>gecko good luck</p>
+		<div class="titlebox" id="titlebox" onmouseover="titlehover()" onclick="geckoreveal()"><div class="title">
+			<div class="titletext" id="titletext"><p>gecko good luck</p></div><div class="titleslashes" id="titleslashes"><p>///</p></div>
 		</div></div>
 	</div>
 
 <script>
+function titlehover() {
+   var element = document.getElementById("titletext");
+   element.classList.add("titlehovertext");
+   var element = document.getElementById("titleslashes");
+   element.classList.add("titlehoverslashes");
+}
 function geckoreveal() {
    var element = document.getElementById("titlebox");
    element.classList.add("geckoreveal");
