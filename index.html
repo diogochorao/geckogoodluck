@@ -102,20 +102,21 @@
 	.titletext {
 		position: absolute;
 	}
-	.titlehovertext {
-		animation-name: title-hover-text;
+	.thtext {
+		animation-name: th-text;
 		animation-duration: 0.7s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	@keyframes title-hover-text {
+	@keyframes th-text {
 		0% {padding-right: 0px;}
 		100% {padding-right: 43px;}
 	}
 	.titleslashes {
 		width: 67px;
 		height: 67px;
+		visibility: hidden;
 		position: absolute;
 		top: -46px;
 		right: -12px;
@@ -124,16 +125,16 @@
 		justify-content: center;
 		align-items: center;
 	}
-	.titlehoverslashes {
-		animation-name: title-hover-slashes;
+	.thslashes {
+		animation-name: th-slashes;
 		animation-duration: 0.7s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	@keyframes title-hover-slashes {
-		0% {top: -46px; right: -12px;}
-		100% {top: 0px; right: 11px;}
+	@keyframes th-slashes {
+		0% {visibility: visible; top: -46px; right: -12px;}
+		100% {visibility: visible; top: 0px; right: 11px;}
 	}
 	.geckoreveal {
 		animation-name: gecko-reveal;
@@ -569,9 +570,9 @@
 <script>
 function titlehover() {
    var element = document.getElementById("titletext");
-   element.classList.add("titlehovertext");
+   element.classList.add("thtext");
    var element = document.getElementById("titleslashes");
-   element.classList.add("titlehoverslashes");
+   element.classList.add("thslashes");
 }
 function geckoreveal() {
    var element = document.getElementById("titlebox");
