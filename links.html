@@ -90,33 +90,66 @@
 		85.68% {color: #ffa3a3;}
 		100% {color: #d2afea;}
 	}
-	.title p {
-		display: inline-block;
-		position: relative;
-		transition: 0.7s;
-	}
-	.title p:after {
-		content: '///';
-		letter-spacing: 3;
+	.titletext {
 		position: absolute;
-		opacity: 0;
-		top: 0;
-		right: -43px;
-		transition: 0.7s;
 	}
-	.title:hover p {
-		padding-right: 43px;
+	.thtext {
+		animation-name: th-text;
+		animation-duration: 50.4s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
 	}
-	.title:hover p:after {
-		opacity: 1;
-		right: 0;
+	@keyframes th-text {
+		0% {padding-right: 0px;}
+		1.39% {padding-right: 43px;}
+		98.61% {padding-right: 43px;}
+		100% {padding-right: 0px;}
+	}
+	.titleslashes {
+		width: 67px;
+		height: 67px;
+		visibility: hidden;
+		position: absolute;
+		top: -46px;
+		right: -12px;
+		letter-spacing: 3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.thslashes {
+		animation-name: th-slashes;
+		animation-duration: 50.4s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes th-slashes {
+		0% {visibility: visible; top: -46px; right: -12px;}
+		1.39% {visibility: visible; top: 0px; right: 11px;}
+		98.61% {visibility: visible; top: 0px; right: 11px;}
+		100% {visibility: hidden; top: -46px; right: -12px;}
+	}
+	.geckoreveal {
+		animation-name: gecko-reveal;
+		animation-duration: 4.3s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes gecko-reveal {
+		0% {margin-left: -157px;}
+		13.95% {margin-left: -50px;}
+		83.72% {margin-left: -50px;}
+		100% {margin-left: -157px;}
 	}
 </style>
 </head>
 <body>
 	<div class="box">
-		<div class="titlebox"><div class="title">
-			<p>gecko good luck</p>
+		<div class="titlebox" id="titlebox" onmouseover="titlehover()"><div class="title">
+			<div class="titletext" id="titletext"><p>gecko good luck</p></div><div class="titleslashes" id="titleslashes"><p>///</p></div>
 		</div></div>
 	</div>
 
@@ -128,5 +161,14 @@ if your preferred music streaming service isn't linked here, just open it up and
 our music is also available to use on instagram (for stories and reels), snapchat, and tiktok! just search "gecko good luck".
 you can also use our songs in your youtube videos if you want! just credit us in the description and you're good to go.
 </p>
+
+<script>
+function titlehover() {
+   var element = document.getElementById("titletext");
+   element.classList.add("thtext");
+   var element = document.getElementById("titleslashes");
+   element.classList.add("thslashes");
+}
+</script>
 </body>
 </html>
