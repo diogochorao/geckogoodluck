@@ -56,7 +56,7 @@
 		0% {transform: rotate(-133deg); top: 83%;}
 		100% {transform: rotate(0deg); top: 0%;}
 	}
-	.titlebox {
+	.title-box {
 		width: 313px;
 		height: 67px;
 		background: rgba(0, 0, 0, 1);
@@ -99,23 +99,23 @@
 		85.68% {color: #ffa3a3;}
 		100% {color: #d2afea;}
 	}
-	.titletext {
+	.title-text {
 		position: absolute;
 	}
-	.thtext {
-		animation-name: th-text;
+	.th-title-text {
+		animation-name: th-title-text;
 		animation-duration: 50.4s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	@keyframes th-text {
+	@keyframes th-title-text {
 		0% {padding-right: 0px;}
 		1.39% {padding-right: 43px;}
 		98.61% {padding-right: 43px;}
 		100% {padding-right: 0px;}
 	}
-	.titleslashes {
+	.title-slashes {
 		width: 67px;
 		height: 67px;
 		visibility: hidden;
@@ -127,20 +127,20 @@
 		justify-content: center;
 		align-items: center;
 	}
-	.thslashes {
-		animation-name: th-slashes;
+	.th-title-slashes {
+		animation-name: th-title-slashes;
 		animation-duration: 50.4s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	@keyframes th-slashes {
+	@keyframes th-title-slashes {
 		0% {visibility: visible; top: -46px; right: -12px;}
 		1.39% {visibility: visible; top: 0px; right: 11px;}
 		98.61% {visibility: visible; top: 0px; right: 11px;}
 		100% {visibility: hidden; top: -46px; right: -12px;}
 	}
-	.geckoreveal {
+	.gecko-reveal {
 		animation-name: gecko-reveal;
 		animation-duration: 4.3s;
 		animation-iteration-count: 1;
@@ -153,7 +153,7 @@
 		83.72% {margin-left: -50px;}
 		100% {margin-left: -157px;}
 	}
-	.leftcover {
+	.left-cover {
 		width: 67px;
 		height: 67px;
 		position: fixed;
@@ -167,7 +167,7 @@
 		animation-timing-function: ease;
 		animation-fill-mode: none;
 	}
-	.rightcover {
+	.right-cover {
 		width: 67px;
 		height: 67px;
 		position: fixed;
@@ -181,11 +181,11 @@
 		animation-timing-function: ease;
 		animation-fill-mode: none;
 	}
-	@keyframes upperbuttons-entrance {
+	@keyframes upper-buttons-entrance {
 		0% {visibility: visible; margin-top: -17px; transform: rotate(-19deg);}
 		100% {visibility: visible; margin-top: -76px;}
 	}
-	@keyframes lowerbuttons-entrance {
+	@keyframes lower-buttons-entrance {
 		0% {visibility: visible; margin-top: -17px; transform: rotate(19deg);}
 		100% {visibility: visible; margin-top: 41px;}
 	}
@@ -521,7 +521,7 @@
 		transition: 0s;
 		background: rgba(0, 0, 0, 0.19);
 	}
-	.ettitle {
+	.et-title {
 		animation-name: et-title;
 		animation-duration: 1.2s;
 		animation-iteration-count: 1;
@@ -533,28 +533,28 @@
 		25% {top: 50%; margin-top: 24px;}
 		100% {top: 0%; margin-top: clamp(16px, calc((100vw - 313px) / 2), 34px);}
 	}
-	.etupperbuttons {
-		animation-name: et-upperbuttons;
+	.et-upper-buttons {
+		animation-name: et-upper-buttons;
 		animation-delay: 0s;
 		animation-duration: 1.2s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	@keyframes et-upperbuttons {
+	@keyframes et-upper-buttons {
 		0% {visibility: visible; top: 50%; margin-top: -76px;}
 		34% {visibility: visible; top: 50%; margin-top: -76px;}
 		100% {visibility: hidden; top: 0%; margin-top: clamp(33px, calc((100vw - 279px) / 2), 51px);}
 	}
-	.etlowerbuttons {
-		animation-name: et-lowerbuttons;
+	.et-lower-buttons {
+		animation-name: et-lower-buttons;
 		animation-delay: 0s;
 		animation-duration: 1.2s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	@keyframes et-lowerbuttons {
+	@keyframes et-lower-buttons {
 		0% {visibility: visible; top: 50%; margin-top: 41px;}
 		25% {visibility: hidden; top: 50%; margin-top: 41px;}
 		100% {visibility: hidden; top: 0%; margin-top: clamp(33px, calc((100vw - 279px) / 2), 51px);}
@@ -565,38 +565,38 @@
 	<div class="box">
 		<div class="spotify" id="spotify"><p>spotify</p></div><div class="youtube" id="youtube"><p>youtube</p></div><div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p></div>
 		<div class="instagram" id="instagram"><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="whither" id="whither"><p>...</p></div>
-		<div class="leftcover"></div><div class="rightcover"></div>
-		<div class="titlebox" id="titlebox" onmouseover="titlehover()" onclick="geckoreveal()"><div class="title">
-			<div class="titletext" id="titletext"><p>gecko good luck</p></div><div class="titleslashes" id="titleslashes"><p>///</p></div>
+		<div class="left-cover"></div><div class="right-cover"></div>
+		<div class="title-box" id="title-box" onmouseover="titlehover()" onclick="geckoreveal()"><div class="title">
+			<div class="title-text" id="title-text"><p>gecko good luck</p></div><div class="title-slashes" id="title-slashes"><p>///</p></div>
 		</div></div>
 	</div>
 
 <script>
 function titlehover() {
-   var element = document.getElementById("titletext");
-   element.classList.add("thtext");
-   var element = document.getElementById("titleslashes");
-   element.classList.add("thslashes");
+   var element = document.getElementById("title-text");
+   element.classList.add("th-title-text");
+   var element = document.getElementById("title-slashes");
+   element.classList.add("th-title-slashes");
 }
 function geckoreveal() {
-   var element = document.getElementById("titlebox");
-   element.classList.add("geckoreveal");
+   var element = document.getElementById("title-box");
+   element.classList.add("gecko-reveal");
 }
 function everywheretransition() {
-   var element = document.getElementById("titlebox");
-   element.classList.add("ettitle");
+   var element = document.getElementById("title-box");
+   element.classList.add("et-title");
    var element = document.getElementById("spotify");
-   element.classList.add("etupperbuttons");
+   element.classList.add("et-upper-buttons");
    var element = document.getElementById("youtube");
-   element.classList.add("etupperbuttons");
+   element.classList.add("et-upper-buttons");
    var element = document.getElementById("everywhere");
-   element.classList.add("etupperbuttons");
+   element.classList.add("et-upper-buttons");
    var element = document.getElementById("instagram");
-   element.classList.add("etlowerbuttons");
+   element.classList.add("et-lower-buttons");
    var element = document.getElementById("contact");
-   element.classList.add("etlowerbuttons");
+   element.classList.add("et-lower-buttons");
    var element = document.getElementById("whither");
-   element.classList.add("etlowerbuttons");
+   element.classList.add("et-lower-buttons");
 }
 </script>
 </body>
