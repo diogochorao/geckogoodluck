@@ -47,10 +47,11 @@
 		justify-content: center;
 		align-items: center;
 	}
-	.titlebox {
+	.title-box {
 		width: 313px;
 		height: 67px;
 		background: rgba(0, 0, 0, 1);
+		border: none;
 		position: fixed;
 		top: 0%;
 		left: 50%;
@@ -63,6 +64,7 @@
 	.title {
 		width: 313px;
 		height: 67px;
+		border: none;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -90,23 +92,23 @@
 		85.68% {color: #ffa3a3;}
 		100% {color: #d2afea;}
 	}
-	.titletext {
+	.title-text {
 		position: absolute;
 	}
-	.thtext {
-		animation-name: th-text;
+	.th-title-text {
+		animation-name: th-title-text;
 		animation-duration: 50.4s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	@keyframes th-text {
+	@keyframes th-title-text {
 		0% {padding-right: 0px;}
 		1.39% {padding-right: 43px;}
 		98.61% {padding-right: 43px;}
 		100% {padding-right: 0px;}
 	}
-	.titleslashes {
+	.title-slashes {
 		width: 67px;
 		height: 67px;
 		visibility: hidden;
@@ -118,39 +120,445 @@
 		justify-content: center;
 		align-items: center;
 	}
-	.thslashes {
-		animation-name: th-slashes;
+	.th-title-slashes {
+		animation-name: th-title-slashes;
 		animation-duration: 50.4s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	@keyframes th-slashes {
+	@keyframes th-title-slashes {
 		0% {visibility: visible; top: -46px; right: -12px;}
 		1.39% {visibility: visible; top: 0px; right: 11px;}
 		98.61% {visibility: visible; top: 0px; right: 11px;}
 		100% {visibility: hidden; top: -46px; right: -12px;}
 	}
-	.geckoreveal {
-		animation-name: gecko-reveal;
-		animation-duration: 4.3s;
+	.e-music {
+		width: 313px;
+		height: 34px;
+		background: rgba(0, 0, 0, 0.13);
+		position: fixed;
+		top: 0%;
+		left: 50%;
+		margin-top: clamp(91px, calc((100vw - 163px) / 2), 109px);
+		margin-left: -157px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 25px;
+		font-weight: 700;
+		font-style: normal;
+		text-align: center;
+		cursor: default;
+		overflow: hidden;
+	}
+	.e-spotify {
+		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
+		height: 34px;
+		visibility: visible;
+		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
+		cursor: pointer;
+		overflow: hidden;
+		position: fixed;
+		top: 0%;
+		left: 50%;
+		margin-top: clamp(133px, calc((100vw - 79px) / 2), 151px);
+		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.7s;
+		animation-name: e-spotify-entranc;
+		animation-delay: 2.4s;
+		animation-duration: 1.6s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	@keyframes gecko-reveal {
-		0% {margin-left: -157px;}
-		13.95% {margin-left: -50px;}
-		83.72% {margin-left: -50px;}
-		100% {margin-left: -157px;}
+	@keyframes e-spotify-entrance {
+		0% {visibility: visible; margin-top: -17px; margin-left: 0px; transform: rotate(0deg);}
+		37.5% {visibility: visible; margin-top: -17px; margin-left: -157px; transform: rotate(-19deg);}
+		100% {visibility: visible; margin-top: -76px; margin-left: -157px; transform: rotate(0deg);}
+	}
+	.e-spotify p {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.e-spotify p:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
+	.e-spotify:hover p {
+		padding-left: 18px;
+	}
+	.e-spotify:hover p:before {
+		opacity: 1;
+		left: 0;
+	}
+	.e-spotify:active {
+		transition: 0s;
+		background: rgba(0, 0, 0, 0.19);
+	}
+	.e-apple-music {
+		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
+		height: 34px;
+		visibility: visible;
+		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
+		cursor: pointer;
+		overflow: hidden;
+		position: fixed;
+		top: 0%;
+		left: 50%;
+		margin-top: clamp(175px, calc((100vw + 5px) / 2), 193px);
+		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.7s;
+		animation-name: e-apple-music-entranc;
+		animation-delay: 2.4s;
+		animation-duration: 1.6s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes e-apple-music-entrance {
+		0% {visibility: visible; margin-top: -17px; margin-left: 0px; transform: rotate(0deg);}
+		37.5% {visibility: visible; margin-top: -17px; margin-left: -157px; transform: rotate(-19deg);}
+		100% {visibility: visible; margin-top: -76px; margin-left: -157px; transform: rotate(0deg);}
+	}
+	.e-apple-music p {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.e-apple-music p:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
+	.e-apple-music:hover p {
+		padding-left: 18px;
+	}
+	.e-apple-music:hover p:before {
+		opacity: 1;
+		left: 0;
+	}
+	.e-apple-music:active {
+		transition: 0s;
+		background: rgba(0, 0, 0, 0.19);
+	}
+	.e-amazon-music {
+		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
+		height: 34px;
+		visibility: visible;
+		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
+		cursor: pointer;
+		overflow: hidden;
+		position: fixed;
+		top: 0%;
+		left: 50%;
+		margin-top: clamp(217px, calc((100vw + 89px) / 2), 235px);
+		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.7s;
+		animation-name: e-amazon-music-entranc;
+		animation-delay: 2.4s;
+		animation-duration: 1.6s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes e-amazon-music-entrance {
+		0% {visibility: visible; margin-top: -17px; margin-left: 0px; transform: rotate(0deg);}
+		37.5% {visibility: visible; margin-top: -17px; margin-left: -157px; transform: rotate(-19deg);}
+		100% {visibility: visible; margin-top: -76px; margin-left: -157px; transform: rotate(0deg);}
+	}
+	.e-amazon-music p {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.e-amazon-music p:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
+	.e-amazon-music:hover p {
+		padding-left: 18px;
+	}
+	.e-amazon-music:hover p:before {
+		opacity: 1;
+		left: 0;
+	}
+	.e-amazon-music:active {
+		transition: 0s;
+		background: rgba(0, 0, 0, 0.19);
+	}
+	.e-youtube-music {
+		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
+		height: 34px;
+		visibility: visible;
+		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
+		cursor: pointer;
+		overflow: hidden;
+		position: fixed;
+		top: 0%;
+		left: 50%;
+		margin-top: clamp(259px, calc((100vw + 173px) / 2), 277px);
+		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.7s;
+		animation-name: e-youtube-music-entranc;
+		animation-delay: 2.4s;
+		animation-duration: 1.6s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes e-youtube-music-entrance {
+		0% {visibility: visible; margin-top: -17px; margin-left: 0px; transform: rotate(0deg);}
+		37.5% {visibility: visible; margin-top: -17px; margin-left: -157px; transform: rotate(-19deg);}
+		100% {visibility: visible; margin-top: -76px; margin-left: -157px; transform: rotate(0deg);}
+	}
+	.e-youtube-music p {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.e-youtube-music p:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
+	.e-youtube-music:hover p {
+		padding-left: 18px;
+	}
+	.e-youtube-music:hover p:before {
+		opacity: 1;
+		left: 0;
+	}
+	.e-youtube-music:active {
+		transition: 0s;
+		background: rgba(0, 0, 0, 0.19);
+	}
+	.e-tidal {
+		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
+		height: 34px;
+		visibility: visible;
+		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
+		cursor: pointer;
+		overflow: hidden;
+		position: fixed;
+		top: 0%;
+		left: 50%;
+		margin-top: clamp(301px, calc((100vw + 257px) / 2), 319px);
+		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.7s;
+		animation-name: e-tidal-entranc;
+		animation-delay: 2.4s;
+		animation-duration: 1.6s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes e-tidal-entrance {
+		0% {visibility: visible; margin-top: -17px; margin-left: 0px; transform: rotate(0deg);}
+		37.5% {visibility: visible; margin-top: -17px; margin-left: -157px; transform: rotate(-19deg);}
+		100% {visibility: visible; margin-top: -76px; margin-left: -157px; transform: rotate(0deg);}
+	}
+	.e-tidal p {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.e-tidal p:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
+	.e-tidal:hover p {
+		padding-left: 18px;
+	}
+	.e-tidal:hover p:before {
+		opacity: 1;
+		left: 0;
+	}
+	.e-tidal:active {
+		transition: 0s;
+		background: rgba(0, 0, 0, 0.19);
+	}
+	.e-soundcloud {
+		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
+		height: 34px;
+		visibility: visible;
+		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
+		cursor: pointer;
+		overflow: hidden;
+		position: fixed;
+		top: 0%;
+		left: 50%;
+		margin-top: clamp(343px, calc((100vw + 341) / 2), 361px);
+		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.7s;
+		animation-name: e-soundcloud-entranc;
+		animation-delay: 2.4s;
+		animation-duration: 1.6s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes e-soundcloud-entrance {
+		0% {visibility: visible; margin-top: -17px; margin-left: 0px; transform: rotate(0deg);}
+		37.5% {visibility: visible; margin-top: -17px; margin-left: -157px; transform: rotate(-19deg);}
+		100% {visibility: visible; margin-top: -76px; margin-left: -157px; transform: rotate(0deg);}
+	}
+	.e-soundcloud p {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.e-soundcloud p:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
+	.e-soundcloud:hover p {
+		padding-left: 18px;
+	}
+	.e-soundcloud:hover p:before {
+		opacity: 1;
+		left: 0;
+	}
+	.e-soundcloud:active {
+		transition: 0s;
+		background: rgba(0, 0, 0, 0.19);
+	}
+	.e-bandcamp {
+		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
+		height: 34px;
+		visibility: visible;
+		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
+		cursor: pointer;
+		overflow: hidden;
+		position: fixed;
+		top: 0%;
+		left: 50%;
+		margin-top: clamp(385px, calc((100vw + 425) / 2), 403px);
+		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.7s;
+		animation-name: e-bandcamp-entranc;
+		animation-delay: 2.4s;
+		animation-duration: 1.6s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes e-bandcamp-entrance {
+		0% {visibility: visible; margin-top: -17px; margin-left: 0px; transform: rotate(0deg);}
+		37.5% {visibility: visible; margin-top: -17px; margin-left: -157px; transform: rotate(-19deg);}
+		100% {visibility: visible; margin-top: -76px; margin-left: -157px; transform: rotate(0deg);}
+	}
+	.e-bandcamp p {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.e-bandcamp p:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
+	.e-bandcamp:hover p {
+		padding-left: 18px;
+	}
+	.e-bandcamp:hover p:before {
+		opacity: 1;
+		left: 0;
+	}
+	.e-bandcamp:active {
+		transition: 0s;
+		background: rgba(0, 0, 0, 0.19);
 	}
 </style>
 </head>
 <body>
 	<div class="box">
-		<div class="titlebox" id="titlebox" onmouseover="titlehover()"><div class="title">
-			<div class="titletext" id="titletext"><p>gecko good luck</p></div><div class="titleslashes" id="titleslashes"><p>///</p></div>
+		<div class="title-box" id="title-box" onmouseover="titlehover()"><div class="title">
+			<div class="title-text" id="title-text"><p>gecko good luck</p></div><div class="title-slashes" id="title-slashes"><p>///</p></div>
 		</div></div>
+		<div class="e-music"><p>MUSIC</p></div>
+		<div class="e-spotify"><p>spotify</p></div>
+		<div class="e-apple-music"><p>apple music</p></div>
+		<div class="e-amazon-music"><p>amazon music</p></div>
+		<div class="e-youtube-music"><p>youtube music</p></div>
+		<div class="e-tidal"><p>tidal</p></div>
+		<div class="e-soundcloud"><p>soundcloud</p></div>
+		<div class="e-bandcamp"><p>bandcamp</p></div>
 	</div>
 
 <p style="display: none">/* EVERYWHERE LINKS & NOTES */
@@ -164,10 +572,10 @@ you can also use our songs in your youtube videos if you want! just credit us in
 
 <script>
 function titlehover() {
-   var element = document.getElementById("titletext");
-   element.classList.add("thtext");
-   var element = document.getElementById("titleslashes");
-   element.classList.add("thslashes");
+   var element = document.getElementById("title-text");
+   element.classList.add("th-title-text");
+   var element = document.getElementById("title-slashes");
+   element.classList.add("th-title-slashes");
 }
 </script>
 </body>
