@@ -38,7 +38,7 @@
 	.box {
 		width: 447px;
 		height: 100%;
-		position: fixed;
+		position: absolute;
 		top: 0%;
 		left: 50%;
 		margin-top: 0px;
@@ -61,7 +61,7 @@
 		height: 67px;
 		background: rgba(0, 0, 0, 1);
 		border: none;
-		position: fixed;
+		position: absolute;
 		top: 50%;
 		left: 50%;
 		margin-top: -34px;
@@ -158,7 +158,7 @@
 	.left-cover {
 		width: 67px;
 		height: 67px;
-		position: fixed;
+		position: absolute;
 		top: 50%;
 		left: 50%;
 		margin-top: -34px;
@@ -172,7 +172,7 @@
 	.right-cover {
 		width: 67px;
 		height: 67px;
-		position: fixed;
+		position: absolute;
 		top: 50%;
 		left: 50%;
 		margin-top: -34px;
@@ -200,7 +200,7 @@
 		border: 1px dashed rgba(0, 0, 0, 0);
 		cursor: pointer;
 		overflow: hidden;
-		position: fixed;
+		position: absolute;
 		top: 50%;
 		left: 50%;
 		margin-top: -76px;
@@ -256,7 +256,7 @@
 		border: 1px dashed rgba(0, 0, 0, 0);
 		cursor: pointer;
 		overflow: hidden;
-		position: fixed;
+		position: absolute;
 		top: 50%;
 		left: 50%;
 		margin-top: -76px;
@@ -311,7 +311,7 @@
 		border: 1px dashed rgba(0, 0, 0, 0);
 		cursor: pointer;
 		overflow: hidden;
-		position: fixed;
+		position: absolute;
 		top: 50%;
 		left: 50%;
 		margin-top: -76px;
@@ -366,7 +366,7 @@
 		border: 1px dashed rgba(0, 0, 0, 0);
 		cursor: pointer;
 		overflow: hidden;
-		position: fixed;
+		position: absolute;
 		top: 50%;
 		left: 50%;
 		margin-top: 41px;
@@ -422,7 +422,7 @@
 		border: 1px dashed rgba(0, 0, 0, 0);
 		cursor: pointer;
 		overflow: hidden;
-		position: fixed;
+		position: absolute;
 		top: 50%;
 		left: 50%;
 		margin-top: 41px;
@@ -477,7 +477,7 @@
 		border: 1px dashed rgba(0, 0, 0, 0);
 		cursor: pointer;
 		overflow: hidden;
-		position: fixed;
+		position: absolute;
 		top: 50%;
 		left: 50%;
 		margin-top: 41px;
@@ -561,10 +561,22 @@
 		25% {visibility: hidden; top: 50%; margin-top: 41px;}
 		100% {visibility: hidden; top: 0%; margin-top: clamp(33px, calc((100vw - 279px) / 2), 51px);}
 	}
+	.et-box {
+		animation-name: et-box;
+		animation-delay: 0s;
+		animation-duration: 1.2s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes et-box {
+		0% {position: absolute}
+		100% {position: static}
+	}
 </style>
 </head>
 <body>
-	<div class="box">
+	<div class="box" id="box">
 		<div class="spotify" id="spotify"><p>spotify</p></div><div class="youtube" id="youtube"><p>youtube</p></div><div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p></div>
 		<div class="instagram" id="instagram"><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="whither" id="whither"><p>...</p></div>
 		<div class="left-cover"></div><div class="right-cover"></div>
@@ -599,6 +611,8 @@ function everywheretransition() {
    element.classList.add("et-lower-buttons");
    var element = document.getElementById("whither");
    element.classList.add("et-lower-buttons");
+   var element = document.getElementById("box");
+   element.classList.add("et-box");
 }
 </script>
 </body>
