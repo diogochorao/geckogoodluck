@@ -18,7 +18,6 @@
 		font-size: 16px;
 		font-style: italic;
 		color: rgba(0, 0, 0, 0.67);
-		overflow: hidden;
 		animation-name: background-color;
 		animation-duration: 49s;
 		animation-iteration-count: infinite;
@@ -34,6 +33,16 @@
 		71.40% {background: #fbcea0;}
 		85.68% {background: #ffa3a3;}
 		100% {background: #d2afea;}
+	}
+	.page {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.box {
 		width: 447px;
@@ -561,6 +570,18 @@
 		25% {visibility: hidden; top: 50%; margin-top: 41px;}
 		100% {visibility: hidden; top: 0%; margin-top: clamp(33px, calc((100vw - 279px) / 2), 51px);}
 	}
+	.et-page {
+		animation-name: et-page;
+		animation-delay: 0s;
+		animation-duration: 1.2s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes et-page {
+		0% {overflow-y: hidden}
+		100% {overflow-y: auto}
+	}
 	.et-box {
 		animation-name: et-box;
 		animation-delay: 0s;
@@ -576,14 +597,14 @@
 </style>
 </head>
 <body>
-	<div class="box" id="box">
+	<div class="page" id="page"><div class="box" id="box">
 		<div class="spotify" id="spotify"><p>spotify</p></div><div class="youtube" id="youtube"><p>youtube</p></div><div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p></div>
 		<div class="instagram" id="instagram"><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="whither" id="whither"><p>...</p></div>
 		<div class="left-cover"></div><div class="right-cover"></div>
 		<div class="title-box" id="title-box" onmouseover="titlehover()" onclick="geckoreveal()"><div class="title">
 			<div class="title-text" id="title-text"><p>gecko good luck</p></div><div class="title-slashes" id="title-slashes"><p>///</p></div>
 		</div></div>
-	</div>
+	</div></div>
 
 <script>
 function titlehover() {
@@ -611,6 +632,8 @@ function everywheretransition() {
    element.classList.add("et-lower-buttons");
    var element = document.getElementById("whither");
    element.classList.add("et-lower-buttons");
+   var element = document.getElementById("page");
+   element.classList.add("et-page");
    var element = document.getElementById("box");
    element.classList.add("et-box");
 }
