@@ -719,12 +719,12 @@
 	}
 	.e-social-media-contact {
 		width: 313px;
-		height: calc(84px + clamp(16px, calc((100vw - 313px) / 2), 34px));
+		height: calc(126px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		background: linear-gradient(rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0));
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(calc(815px + clamp(32px, calc(100vw - 313px), 68px)), calc((100vw + 1175px + clamp(64px, calc(2 x (100vw - 313px)), 136px)) / 2), calc(833px + clamp(32px, calc(100vw - 313px), 68px)));
+		margin-top: clamp(calc(857px + clamp(32px, calc(100vw - 313px), 68px)), calc((100vw + 1259px + clamp(64px, calc(2 x (100vw - 313px)), 136px)) / 2), calc(875px + clamp(32px, calc(100vw - 313px), 68px)));
 		margin-left: -157px;
 		display: flex;
 		justify-content: center;
@@ -738,6 +738,118 @@
 	}
 	.e-social-media-contact p {
 		margin-top: 13px;
+	}
+	.e-instagram {
+		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
+		height: 34px;
+		visibility: visible;
+		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
+		cursor: pointer;
+		overflow: hidden;
+		position: absolute;
+		top: 0%;
+		left: 50%;
+		margin-top: clamp(calc(907px + clamp(32px, calc(100vw - 313px), 68px)), calc((100vw + 1359px + clamp(64px, calc(2 x (100vw - 313px)), 136px)) / 2), calc(925px + clamp(32px, calc(100vw - 313px), 68px)));
+		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.7s;
+		animation-name: e-instagram-entranc;
+		animation-delay: 2.4s;
+		animation-duration: 1.6s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes e-instagram-entrance {
+		0% {visibility: visible; margin-top: -17px; margin-left: 0px; transform: rotate(0deg);}
+		37.5% {visibility: visible; margin-top: -17px; margin-left: -157px; transform: rotate(-19deg);}
+		100% {visibility: visible; margin-top: -76px; margin-left: -157px; transform: rotate(0deg);}
+	}
+	.e-instagram p {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.e-instagram p:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
+	.e-instagram:hover p {
+		padding-left: 18px;
+	}
+	.e-instagram:hover p:before {
+		opacity: 1;
+		left: 0;
+	}
+	.e-instagram:active {
+		transition: 0s;
+		background: rgba(0, 0, 0, 0.19);
+	}
+	.e-email {
+		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
+		height: 34px;
+		visibility: visible;
+		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px dashed rgba(0, 0, 0, 0);
+		cursor: pointer;
+		overflow: hidden;
+		position: absolute;
+		top: 0%;
+		left: 50%;
+		margin-top: clamp(calc(949px + clamp(32px, calc(100vw - 313px), 68px)), calc((100vw + 1443px + clamp(64px, calc(2 x (100vw - 313px)), 136px)) / 2), calc(967px + clamp(32px, calc(100vw - 313px), 68px)));
+		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.7s;
+		animation-name: e-email-entranc;
+		animation-delay: 2.4s;
+		animation-duration: 1.6s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes e-email-entrance {
+		0% {visibility: visible; margin-top: -17px; margin-left: 0px; transform: rotate(0deg);}
+		37.5% {visibility: visible; margin-top: -17px; margin-left: -157px; transform: rotate(-19deg);}
+		100% {visibility: visible; margin-top: -76px; margin-left: -157px; transform: rotate(0deg);}
+	}
+	.e-email p {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.e-email p:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
+	.e-email:hover p {
+		padding-left: 18px;
+	}
+	.e-email:hover p:before {
+		opacity: 1;
+		left: 0;
+	}
+	.e-email:active {
+		transition: 0s;
+		background: rgba(0, 0, 0, 0.19);
 	}
 </style>
 </head>
@@ -759,6 +871,9 @@
 		<div class="e-music-note-3"><p>you can also use our songs in your youtube videos if you want to! just credit us in the description.<br>(download links are here.)</p></div>
 		<div class="e-videos"><p>VIDEOS</p></div>
 		<div class="e-youtube"><p>youtube</p></div>
+		<div class="e-social-media-contact"><p>SOCIAL MEDIA / CONTACT</p></div>
+		<div class="e-instagram"><p>instagram</p></div>
+		<div class="e-email"><p>email</p></div>
 	</div>
 
 <script>
