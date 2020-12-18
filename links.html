@@ -851,6 +851,15 @@
 		transition: 0s;
 		background: rgba(0, 0, 0, 0.19);
 	}
+	.e-footer {
+		width: 313px;
+		height: clamp(16px, calc((100vw - 313px) / 2), 34px);
+		position: absolute;
+		top: 0%;
+		left: 50%;
+		margin-top: clamp(calc(983px + clamp(48px, calc(1.5 * (100vw - 313px)), 102px)), calc((100vw + 1511px + clamp(96px, calc(3 * (100vw - 313px)), 204px)) / 2), calc(1001px + clamp(48px, calc(1.5 * (100vw - 313px)), 102px)));
+		margin-left: -157px;
+	}
 </style>
 </head>
 <body>
@@ -874,6 +883,7 @@
 		<div class="e-social-media-contact"><p>SOCIAL MEDIA / CONTACT</p></div>
 		<div class="e-instagram"><p>instagram</p></div>
 		<div class="e-email"><p>email</p></div>
+		<div class="e-footer"></div>
 	</div>
 
 <script>
