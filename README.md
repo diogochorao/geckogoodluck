@@ -1,1 +1,1 @@
-gecko good luck ///
+gecko good luck
