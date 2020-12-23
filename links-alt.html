@@ -134,22 +134,22 @@
 	}
 	.e-links-background {
 		width: 313px;
-		height: 876px;
+		height: calc(844px + clamp(48px, calc(1.5 * (100vw - 313px)), 102px));
 		background: linear-gradient(rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0));
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(91px, calc((100vw - 163px) / 2), 109px);
+		margin-top: clamp(99px, calc((100vw - 313px) + 67px), 135px);
 		margin-left: -157px;
 	}
 	.e-music {
 		width: 313px;
-		height: calc(666px + clamp(16px, calc((100vw - 313px) / 2), 34px));
+		height: calc(657px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		background: rgba(0, 0, 0, 0.13);
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(91px, calc((100vw - 163px) / 2), 109px);
+		margin-top: clamp(99px, calc((100vw - 313px) + 67px), 135px);
 		margin-left: -157px;
 		display: flex;
 		justify-content: center;
@@ -162,7 +162,7 @@
 		overflow: hidden;
 	}
 	.e-music p {
-		margin-top: 10px;
+		margin-top: 6px;
 	}
 	.e-spotify {
 		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
@@ -176,7 +176,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(141px, calc((100vw - 63px) / 2), 159px);
+		margin-top: clamp(140px, calc((100vw - 313px) + 108px), 176px);
 		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		display: flex;
 		justify-content: center;
@@ -232,7 +232,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(183px, calc((100vw + 21px) / 2), 201px);
+		margin-top: clamp(182px, calc((100vw - 313px) + 150px), 218px);
 		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		display: flex;
 		justify-content: center;
@@ -288,7 +288,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(225px, calc((100vw + 105px) / 2), 243px);
+		margin-top: clamp(224px, calc((100vw - 313px) + 192px), 260px);
 		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		display: flex;
 		justify-content: center;
@@ -344,7 +344,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(267px, calc((100vw + 189px) / 2), 285px);
+		margin-top: clamp(266px, calc((100vw - 313px) + 234px), 302px);
 		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		display: flex;
 		justify-content: center;
@@ -400,7 +400,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(309px, calc((100vw + 273px) / 2), 327px);
+		margin-top: clamp(308px, calc((100vw - 313px) + 276px), 344px);
 		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		display: flex;
 		justify-content: center;
@@ -456,7 +456,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(351px, calc((100vw + 357px) / 2), 369px);
+		margin-top: clamp(350px, calc((100vw - 313px) + 318px), 386px);
 		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		display: flex;
 		justify-content: center;
@@ -512,7 +512,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(393px, calc((100vw + 441px) / 2), 411px);
+		margin-top: clamp(392px, calc((100vw - 313px) + 360px), 428px);
 		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		display: flex;
 		justify-content: center;
@@ -568,7 +568,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(435px, calc((100vw + 525px) / 2), 453px);
+		margin-top: clamp(434px, calc((100vw - 313px) + 402px), 470px);
 		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		display: flex;
 		justify-content: center;
@@ -599,7 +599,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(545px, calc((100vw + 745px) / 2), 563px);
+		margin-top: clamp(544px, calc((100vw - 313px) + 512px), 580px);
 		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		display: flex;
 		justify-content: center;
@@ -630,7 +630,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(655px, calc((100vw + 965px) / 2), 673px);
+		margin-top: clamp(654px, calc((100vw - 313px) + 622px), 690px);
 		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		display: flex;
 		justify-content: center;
@@ -651,12 +651,12 @@
 	}
 	.e-videos {
 		width: 313px;
-		height: calc(76px + clamp(16px, calc((100vw - 313px) / 2), 34px));
+		height: calc(75px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		background: rgba(0, 0, 0, 0.13);
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(calc(765px + clamp(16px, calc((100vw - 313px) / 2), 34px)), calc((100vw + 1075px + clamp(32px, calc(100vw - 313px), 68px)) / 2), calc(783px + clamp(16px, calc((100vw - 313px) / 2), 34px)));
+		margin-top: clamp(772px, calc(1.5 * (100vw - 313px) + 724px), 826px);
 		margin-left: -157px;
 		display: flex;
 		justify-content: center;
@@ -669,7 +669,7 @@
 		overflow: hidden;
 	}
 	.e-videos p {
-		margin-top: -7px;
+		margin-top: 6px;
 	}
 	.e-youtube {
 		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
@@ -683,7 +683,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(calc(815px + clamp(16px, calc((100vw - 313px) / 2), 34px)), calc((100vw + 1175px + clamp(32px, calc(100vw - 313px), 68px)) / 2), calc(833px + clamp(16px, calc((100vw - 313px) / 2), 34px)));
+		margin-top: clamp(813px, calc(1.5 * (100vw - 313px) + 765px), 867px);
 		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		display: flex;
 		justify-content: center;
@@ -729,12 +729,12 @@
 	}
 	.e-social-media-contact {
 		width: 313px;
-		height: calc(118px + clamp(16px, calc((100vw - 313px) / 2), 34px));
+		height: calc(112px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		background: rgba(0, 0, 0, 0.13);
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(calc(857px + clamp(32px, calc(100vw - 313px), 68px)), calc((100vw + 1259px + clamp(64px, calc(2 * (100vw - 313px)), 136px)) / 2), calc(875px + clamp(32px, calc(100vw - 313px), 68px)));
+		margin-top: clamp(863px, calc(2 * (100vw - 313px) + 799px), 935px);
 		margin-left: -157px;
 		display: flex;
 		justify-content: center;
@@ -747,7 +747,7 @@
 		overflow: hidden;
 	}
 	.e-social-media-contact p {
-		margin-top: -5px;
+		margin-top: 6px;
 	}
 	.e-instagram {
 		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
@@ -761,7 +761,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(calc(907px + clamp(32px, calc(100vw - 313px), 68px)), calc((100vw + 1359px + clamp(64px, calc(2 * (100vw - 313px)), 136px)) / 2), calc(925px + clamp(32px, calc(100vw - 313px), 68px)));
+		margin-top: clamp(899px, calc(2 * (100vw - 313px) + 835px), 971px);
 		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		display: flex;
 		justify-content: center;
@@ -817,7 +817,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(calc(949px + clamp(32px, calc(100vw - 313px), 68px)), calc((100vw + 1443px + clamp(64px, calc(2 * (100vw - 313px)), 136px)) / 2), calc(967px + clamp(32px, calc(100vw - 313px), 68px)));
+		margin-top: clamp(941px, calc(2 * (100vw - 313px) + 877px), 1013px);
 		margin-left: calc(-157px + clamp(16px, calc((100vw - 313px) / 2), 34px));
 		display: flex;
 		justify-content: center;
@@ -867,7 +867,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(calc(983px + clamp(48px, calc(1.5 * (100vw - 313px)), 102px)), calc((100vw + 1511px + clamp(96px, calc(3 * (100vw - 313px)), 204px)) / 2), calc(1001px + clamp(48px, calc(1.5 * (100vw - 313px)), 102px)));
+		margin-top: clamp(957px, calc(2.5 * (100vw - 313px) + 877px), 1047px);
 		margin-left: -157px;
 	}
 </style>
