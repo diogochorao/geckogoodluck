@@ -777,6 +777,18 @@
 		89.42% {visibility: visible; top: 100%;}
 		100% {visibility: visible;}
 	}
+	.et-e-twitter {
+		animation-name: et-e-twitter;
+		animation-duration: 1.9s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes et-e-twitter {
+		0% {visibility: hidden; top: 100%;}
+		89.42% {visibility: visible; top: 100%;}
+		100% {visibility: visible;}
+	}
 	.et-e-email {
 		animation-name: et-e-email;
 		animation-duration: 1.9s;
@@ -841,9 +853,9 @@
 	}
 	.e-links-background {
 		width: 313px;
-		height: calc(892px + clamp(48px, calc(1.5 * (100vw - 313px)), 102px));
+		height: calc(832px + clamp(48px, calc(1.5 * (100vw - 313px)), 102px));
 		visibility: hidden;
-		background: linear-gradient(rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.01));
+		background: linear-gradient(rgba(0, 0, 0, 0.19), rgba(0, 0, 0, 0.01));
 		position: absolute;
 		top: 0%;
 		left: 50%;
@@ -852,7 +864,7 @@
 	}
 	.e-music {
 		width: 313px;
-		height: calc(666px + clamp(16px, calc(0.5 * (100vw - 313px)), 34px));
+		height: calc(564px + clamp(16px, calc(0.5 * (100vw - 313px)), 34px));
 		visibility: hidden;
 		position: absolute;
 		top: 0%;
@@ -1189,11 +1201,12 @@
 	}
 	.e-music-note-1 {
 		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
-		height: 102px;
+		height: 68px;
 		visibility: hidden;
 		background: rgba(0, 0, 0, 0.07);
+		color: rgba(0, 0, 0, 0.61);
 		box-sizing: border-box;
-		border: 1px solid rgba(0, 0, 0, 0.13);
+		border: 1px solid rgba(0, 0, 0, 0);
 		cursor: default;
 		overflow: hidden;
 		position: absolute;
@@ -1209,17 +1222,18 @@
 	}
 	.e-music-note-2 {
 		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
-		height: 102px;
+		height: 68px;
 		visibility: hidden;
 		background: rgba(0, 0, 0, 0.07);
+		color: rgba(0, 0, 0, 0.61);
 		box-sizing: border-box;
-		border: 1px solid rgba(0, 0, 0, 0.13);
+		border: 1px solid rgba(0, 0, 0, 0);
 		cursor: default;
 		overflow: hidden;
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(545px, calc(0.5 * (100vw - 313px) + 529px), 563px);
+		margin-top: clamp(511px, calc(0.5 * (100vw - 313px) + 495px), 529px);
 		margin-left: calc(-157px + clamp(16px, calc(0.5 * (100vw - 313px)), 34px));
 		display: flex;
 		justify-content: center;
@@ -1229,17 +1243,18 @@
 	}
 	.e-music-note-3 {
 		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
-		height: 102px;
+		height: 68px;
 		visibility: hidden;
 		background: rgba(0, 0, 0, 0.07);
+		color: rgba(0, 0, 0, 0.61);
 		box-sizing: border-box;
-		border: 1px solid rgba(0, 0, 0, 0.13);
+		border: 1px solid rgba(0, 0, 0, 0);
 		cursor: default;
 		overflow: hidden;
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(655px, calc(0.5 * (100vw - 313px) + 639px), 673px);
+		margin-top: clamp(587px, calc(0.5 * (100vw - 313px) + 571px), 605px);
 		margin-left: calc(-157px + clamp(16px, calc(0.5 * (100vw - 313px)), 34px));
 		display: flex;
 		justify-content: center;
@@ -1254,7 +1269,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(773px, calc(1 * (100vw - 313px) + 741px), 809px);
+		margin-top: clamp(671px, calc(1 * (100vw - 313px) + 639px), 707px);
 		margin-left: -157px;
 	}
 	.e-divider-1 {
@@ -1278,7 +1293,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(781px, calc(1 * (100vw - 313px) + 749px), 817px);
+		margin-top: clamp(679px, calc(1 * (100vw - 313px) + 647px), 715px);
 		margin-left: -157px;
 		display: flex;
 		justify-content: center;
@@ -1305,7 +1320,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(831px, calc(1 * (100vw - 313px) + 799px), 867px);
+		margin-top: clamp(729px, calc(1 * (100vw - 313px) + 697px), 765px);
 		margin-left: calc(-157px + clamp(16px, calc(0.5 * (100vw - 313px)), 34px));
 		display: flex;
 		justify-content: center;
@@ -1345,7 +1360,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(881px, calc(1.5 * (100vw - 313px) + 833px), 935px);
+		margin-top: clamp(779px, calc(1.5 * (100vw - 313px) + 731px), 833px);
 		margin-left: -157px;
 	}
 	.e-divider-2 {
@@ -1364,12 +1379,12 @@
 	}
 	.e-social-media-contact {
 		width: 313px;
-		height: calc(126px + clamp(16px, calc(0.5 * (100vw - 313px)), 34px));
+		height: calc(168px + clamp(16px, calc(0.5 * (100vw - 313px)), 34px));
 		visibility: hidden;
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(889px, calc(1.5 * (100vw - 313px) + 841px), 943px);
+		margin-top: clamp(787px, calc(1.5 * (100vw - 313px) + 739px), 841px);
 		margin-left: -157px;
 		display: flex;
 		justify-content: center;
@@ -1396,7 +1411,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(939px, calc(1.5 * (100vw - 313px) + 891px), 993px);
+		margin-top: clamp(837px, calc(1.5 * (100vw - 313px) + 789px), 891px);
 		margin-left: calc(-157px + clamp(16px, calc(0.5 * (100vw - 313px)), 34px));
 		display: flex;
 		justify-content: center;
@@ -1429,6 +1444,51 @@
 		transition: 0s;
 		background: rgba(0, 0, 0, 0.19);
 	}
+	.e-twitter {
+		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
+		height: 34px;
+		visibility: hidden;
+		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px solid rgba(0, 0, 0, 0);
+		cursor: pointer;
+		overflow: hidden;
+		position: absolute;
+		top: 0%;
+		left: 50%;
+		margin-top: clamp(879px, calc(1.5 * (100vw - 313px) + 831px), 933px);
+		margin-left: calc(-157px + clamp(16px, calc(0.5 * (100vw - 313px)), 34px));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.7s;
+	}
+	.e-twitter p {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.e-twitter p:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
+	.e-twitter:hover p {
+		padding-left: 18px;
+	}
+	.e-twitter:hover p:before {
+		opacity: 1;
+		left: 0;
+	}
+	.e-twitter:active {
+		transition: 0s;
+		background: rgba(0, 0, 0, 0.19);
+	}
 	.e-email {
 		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
 		height: 34px;
@@ -1441,7 +1501,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(981px, calc(1.5 * (100vw - 313px) + 933px), 1035px);
+		margin-top: clamp(921px, calc(1.5 * (100vw - 313px) + 873px), 975px);
 		margin-left: calc(-157px + clamp(16px, calc(0.5 * (100vw - 313px)), 34px));
 		display: flex;
 		justify-content: center;
@@ -1481,7 +1541,7 @@
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: clamp(1031px, calc(2 * (100vw - 313px) + 967px), 1103px);
+		margin-top: clamp(971px, calc(2 * (100vw - 313px) + 907px), 1043px);
 		margin-left: -157px;
 	}
 </style>
@@ -1500,15 +1560,16 @@
 		<div class="e-tidal" id="e-tidal"><p>tidal</p></div>
 		<div class="e-soundcloud" id="e-soundcloud"><p>soundcloud</p></div>
 		<div class="e-bandcamp" id="e-bandcamp"><p>bandcamp</p></div>
-		<div class="e-music-note-1" id="e-music-note-1"><p>if your preferred music streaming service isn't linked here, just open it up and search "gecko good luck"! we're probably on it too.</p></div>
-		<div class="e-music-note-2" id="e-music-note-2"><p>our music is also available to use on instagram (for stories and reels), snapchat, and tiktok! just search "gecko good luck".</p></div>
-		<div class="e-music-note-3" id="e-music-note-3"><p>you can also use our songs in your youtube videos if you want to! just credit us in the description.<br>(download links are here.)</p></div>
+		<div class="e-music-note-1" id="e-music-note-1"><p>also, everywhere else!<br>just search "gecko good luck".</p></div>
+		<div class="e-music-note-2" id="e-music-note-2"><p>available to use on<br>instagram and tiktok!</p></div>
+		<div class="e-music-note-3" id="e-music-note-3"><p>free to use in youtube videos!<br>download links are here.</p></div>
 		<div class="e-divider-1-box" id="e-divider-1-box"><div class="e-divider-1" id="e-divider-1"></div></div>
 		<div class="e-videos" id="e-videos"><p>VIDEOS</p></div>
 		<div class="e-youtube" id="e-youtube"><p>youtube</p></div>
 		<div class="e-divider-2-box" id="e-divider-2-box"><div class="e-divider-2" id="e-divider-2"></div></div>
 		<div class="e-social-media-contact" id="e-social-media-contact"><p>SOCIAL MEDIA / CONTACT</p></div>
 		<div class="e-instagram" id="e-instagram"><p>instagram</p></div>
+		<div class="e-twitter" id="e-twitter"><p>twitter</p></div>
 		<div class="e-email" id="e-email"><p>email</p></div>
 		<div class="e-footer" id="e-footer"></div>
 		<div class="title-box" id="title-box" onmouseover="titlehover()" onclick="geckoreveal()"><div class="title">
@@ -1576,6 +1637,8 @@ function everywheretransition() {
    element.classList.add("et-e-social-media-contact");
    var element = document.getElementById("e-instagram");
    element.classList.add("et-e-instagram");
+   var element = document.getElementById("e-twitter");
+   element.classList.add("et-e-twitter");
    var element = document.getElementById("e-email");
    element.classList.add("et-e-email");
    var element = document.getElementById("e-footer");
