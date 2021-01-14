@@ -1781,7 +1781,7 @@
 		<div class="e-twitter" id="e-twitter"><p>twitter</p></div>
 		<div class="e-email" id="e-email"><p>email</p></div>
 		<div class="e-footer" id="e-footer"></div>
-		<div class="title-box" id="title-box" onmouseover="titlehover()" onclick="geckoreveal()"><div class="title">
+		<div class="title-box" id="title-box" onmouseover="titlehover()" onclick="geckoreveal();setTimeout(geckorevealreset, 4300)"><div class="title">
 			<div class="title-text" id="title-text"><p>gecko good luck</p></div><div class="title-slashes" id="title-slashes"><p>///</p></div>
 		</div></div>
 	</div></div>
@@ -1796,7 +1796,6 @@ function titlehover() {
 function geckoreveal() {
    var element = document.getElementById("title-box");
    element.classList.add("gecko-reveal");
-   element.addEventListener("animationend", geckorevealreset);
 }
 function geckorevealreset() {
    var element = document.getElementById("title-box");
