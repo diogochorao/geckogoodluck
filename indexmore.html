@@ -1794,6 +1794,11 @@ function titlehover() {
 function geckoreveal() {
    var element = document.getElementById("title-box");
    element.classList.add("gecko-reveal");
+   element.addEventListener("animationend", geckorevealreset);
+}
+function geckorevealreset() {
+   var element = document.getElementById("title-box");
+   element.classList.remove("gecko-reveal");
 }
 function morehover() {
    var element = document.getElementById("about");
