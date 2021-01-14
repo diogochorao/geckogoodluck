@@ -625,6 +625,17 @@
 		0% {visibility: visible; margin-top: -42px}
 		100% {visibility: visible; margin-top: 42px;}
 	}
+	.mho-about {
+		animation-name: mho-about;
+		animation-duration: 0.7s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes mho-about {
+		0% {visibility: visible; margin-top: 42px}
+		100% {visibility: visible; margin-top: -42px;}
+	}
 	.downloads {
 		width: 99px;
 		height: 34px;
@@ -680,6 +691,17 @@
 	@keyframes mh-downloads {
 		0% {visibility: visible; margin-top: 0px;}
 		100% {visibility: visible; margin-top: 84px;}
+	}
+	.mho-downloads {
+		animation-name: mho-downloads;
+		animation-duration: 0.7s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes mho-downloads {
+		0% {visibility: visible; margin-top: 84px;}
+		100% {visibility: visible; margin-top: 0px;}
 	}
 	.et-title {
 		animation-name: et-title;
@@ -1734,7 +1756,7 @@
 <body>
 	<div class="page" id="page"><div class="box" id="box">
 		<div class="spotify" id="spotify"><p>spotify</p></div><div class="youtube" id="youtube"><p>youtube</p></div><div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p></div>
-		<div class="instagram" id="instagram"><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="more-box" id="more-box" onmouseover="morehover()"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more" id="more"><p>more</p></div></div>
+		<div class="instagram" id="instagram"><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="more-box" id="more-box" onmouseover="morehover()" onmouseleave="morehoveroff()"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more" id="more"><p>more</p></div></div>
 		<div class="left-cover"></div><div class="right-cover"></div>
 		<div class="e-links-background" id="e-links-background"></div>
 		<div class="e-music" id="e-music"><p>MUSIC</p></div>
@@ -1778,6 +1800,12 @@ function morehover() {
    element.classList.add("mh-about");
    var element = document.getElementById("downloads");
    element.classList.add("mh-downloads");
+}
+function morehoveroff() {
+   var element = document.getElementById("about");
+   element.classList.add("mho-about");
+   var element = document.getElementById("downloads");
+   element.classList.add("mho-downloads");
 }
 function everywheretransition() {
    var element = document.getElementById("title-box");
