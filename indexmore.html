@@ -506,6 +506,9 @@
 		0% {visibility: visible; margin-top: -17px; transform: rotate(19deg);}
 		100% {visibility: visible; margin-top: 41px;}
 	}
+	.more-box:hover {
+		height: 118px;
+	}
 	.more {
 		width: 99px;
 		height: 34px;
@@ -549,6 +552,134 @@
 	.more:active {
 		transition: 0s;
 		background: rgba(0, 0, 0, 0.19);
+	}
+	.more-back-cover {
+		width: 99px;
+		height: 34px;
+		border: none;
+		overflow: hidden;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		margin-top: 0px;
+		margin-left: 0px;
+		animation-name: background-color;
+		animation-duration: 49s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease;
+		animation-fill-mode: none;
+	}
+	.about {
+		width: 99px;
+		height: 34px;
+		visibility: hidden;
+		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px solid rgba(0, 0, 0, 0);
+		cursor: pointer;
+		overflow: hidden;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		margin-top: 0px;
+		margin-left: 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.7s;
+	}
+	.about p {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.about p:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
+	.about:hover p {
+		padding-left: 18px;
+	}
+	.about:hover p:before {
+		opacity: 1;
+		left: 0;
+	}
+	.about:active {
+		transition: 0s;
+		background: rgba(0, 0, 0, 0.19);
+	}
+	.mh-about {
+		animation-name: mh-about;
+		animation-duration: 0.7s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes mh-about {
+		0% {visibility: visible; margin-top: -42px}
+		100% {visibility: visible; margin-top: 42px;}
+	}
+	.downloads {
+		width: 99px;
+		height: 34px;
+		visibility: hidden;
+		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px solid rgba(0, 0, 0, 0);
+		cursor: pointer;
+		overflow: hidden;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		margin-top: 0px;
+		margin-left: 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.7s;
+	}
+	.downloads p {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.7s;
+	}
+	.downloads p:before {
+		content: '///';
+		letter-spacing: 1.5;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: -18px;
+		transition: 0.7s;
+	}
+	.downloads:hover p {
+		padding-left: 18px;
+	}
+	.downloads:hover p:before {
+		opacity: 1;
+		left: 0;
+	}
+	.downloads:active {
+		transition: 0s;
+		background: rgba(0, 0, 0, 0.19);
+	}
+	.mh-downloads {
+		animation-name: mh-downloads;
+		animation-duration: 0.7s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes mh-downloads {
+		0% {visibility: visible; margin-top: 0px;}
+		100% {visibility: visible; margin-top: 84px;}
 	}
 	.et-title {
 		animation-name: et-title;
@@ -1603,7 +1734,7 @@
 <body>
 	<div class="page" id="page"><div class="box" id="box">
 		<div class="spotify" id="spotify"><p>spotify</p></div><div class="youtube" id="youtube"><p>youtube</p></div><div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p></div>
-		<div class="instagram" id="instagram"><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="more-box" id="more-box"><div class="more" id="more"><p>more</p></div></div>
+		<div class="instagram" id="instagram"><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="more-box" id="more-box" onmouseover="morehover()"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more" id="more"><p>more</p></div></div>
 		<div class="left-cover"></div><div class="right-cover"></div>
 		<div class="e-links-background" id="e-links-background"></div>
 		<div class="e-music" id="e-music"><p>MUSIC</p></div>
@@ -1641,6 +1772,12 @@ function titlehover() {
 function geckoreveal() {
    var element = document.getElementById("title-box");
    element.classList.add("gecko-reveal");
+}
+function morehover() {
+   var element = document.getElementById("about");
+   element.classList.add("mh-about");
+   var element = document.getElementById("downloads");
+   element.classList.add("mh-downloads");
 }
 function everywheretransition() {
    var element = document.getElementById("title-box");
