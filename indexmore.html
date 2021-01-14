@@ -1797,8 +1797,10 @@ function geckoreveal() {
 }
 function morehover() {
    var element = document.getElementById("about");
+   element.classList.remove("mho-about");
    element.classList.add("mh-about");
    var element = document.getElementById("downloads");
+   element.classList.remove("mho-downloads");
    element.classList.add("mh-downloads");
 }
 function morehoveroff() {
