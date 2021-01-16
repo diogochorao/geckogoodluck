@@ -511,10 +511,38 @@
 	.more-box:hover {
 		height: 118px;
 	}
-	.more {
+	.more-back-cover {
+		width: 99px;
+		height: 34px;
+		border: none;
+		overflow: hidden;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		margin-top: 0px;
+		margin-left: 0px;
+		animation-name: background-color;
+		animation-duration: 49s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease;
+		animation-fill-mode: none;
+	}
+	.more-background {
 		width: 99px;
 		height: 34px;
 		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px solid rgba(0, 0, 0, 0);
+		overflow: hidden;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+	.more {
+		width: 99px;
+		height: 34px;
 		box-sizing: border-box;
 		border: 1px solid rgba(0, 0, 0, 0);
 		cursor: default;
@@ -548,17 +576,16 @@
 		animation-fill-mode: forwards;
 	}
 	@keyframes mho-more {
-		0% {visibility: visible; margin-left: -99px}
+		0% {visibility: visible; margin-left: 99px}
 		100% {visibility: visible; margin-left: 0px;}
 	}
 	.whither {
 		width: 99px;
 		height: 34px;
 		visibility: hidden;
-		background: rgba(0, 0, 0, 0.13);
 		box-sizing: border-box;
 		border: 1px solid rgba(0, 0, 0, 0);
-		cursor: pointer;
+		cursor: default;
 		overflow: hidden;
 		position: absolute;
 		top: 0%;
@@ -569,10 +596,6 @@
 		justify-content: center;
 		align-items: center;
 		transition: 0.7s;
-	}
-	.whither:active {
-		transition: 0s;
-		background: rgba(0, 0, 0, 0.19);
 	}
 	.mh-whither {
 		animation-name: mh-whither;
@@ -594,23 +617,7 @@
 	}
 	@keyframes mho-whither {
 		0% {visibility: visible; margin-left: 0px}
-		100% {visibility: visible; margin-left: 99px;}
-	}
-	.more-back-cover {
-		width: 99px;
-		height: 34px;
-		border: none;
-		overflow: hidden;
-		position: absolute;
-		top: 0%;
-		left: 0%;
-		margin-top: 0px;
-		margin-left: 0px;
-		animation-name: background-color;
-		animation-duration: 49s;
-		animation-iteration-count: infinite;
-		animation-timing-function: ease;
-		animation-fill-mode: none;
+		100% {visibility: visible; margin-left: -99px;}
 	}
 	.about {
 		width: 99px;
@@ -1799,7 +1806,7 @@
 <body>
 	<div class="page" id="page"><div class="box" id="box">
 		<div class="spotify" id="spotify"><p>spotify</p></div><div class="youtube" id="youtube"><p>youtube</p></div><div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p></div>
-		<div class="instagram" id="instagram"><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="more-box" id="more-box" onmouseenter="morehover()" onmouseleave="morehoveroff()"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more" id="more"><p>more</p></div><div class="whither" id="whither"><p>&darr;</p></div></div>
+		<div class="instagram" id="instagram"><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="more-box" id="more-box" onmouseenter="morehover()" onmouseleave="morehoveroff()"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more-background"></div><div class="more" id="more"><p>more</p></div><div class="whither" id="whither"><p>&darr;</p></div></div>
 		<div class="left-cover"></div><div class="right-cover"></div>
 		<div class="e-links-background" id="e-links-background"></div>
 		<div class="e-music" id="e-music"><p>MUSIC</p></div>
