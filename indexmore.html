@@ -517,7 +517,7 @@
 		background: rgba(0, 0, 0, 0.13);
 		box-sizing: border-box;
 		border: 1px solid rgba(0, 0, 0, 0);
-		cursor: pointer;
+		cursor: default;
 		overflow: hidden;
 		position: absolute;
 		top: 0%;
@@ -529,31 +529,72 @@
 		align-items: center;
 		transition: 0.7s;
 	}
-	.more p {
+	.mh-more {
+		animation-name: mh-more;
+		animation-duration: 0.7s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes mh-more {
+		0% {visibility: visible; margin-left: 0px}
+		100% {visibility: visible; margin-left: -99px;}
+	}
+	.mho-more {
+		animation-name: mho-more;
+		animation-duration: 0.7s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes mho-more {
+		0% {visibility: visible; margin-left: -99px}
+		100% {visibility: visible; margin-left: 0px;}
+	}
+	.whither {
+		width: 99px;
+		height: 34px;
+		visibility: hidden;
+		background: rgba(0, 0, 0, 0.13);
+		box-sizing: border-box;
+		border: 1px solid rgba(0, 0, 0, 0);
 		cursor: pointer;
-		display: inline-block;
-		position: relative;
-		transition: 0.7s;
-	}
-	.more p:before {
-		content: '///';
-		letter-spacing: 1.5;
+		overflow: hidden;
 		position: absolute;
-		opacity: 0;
-		top: 0;
-		left: -18px;
+		top: 0%;
+		left: 0%;
+		margin-top: 0px;
+		margin-left: 99px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		transition: 0.7s;
 	}
-	.more:hover p {
-		padding-left: 18px;
-	}
-	.more:hover p:before {
-		opacity: 1;
-		left: 0;
-	}
-	.more:active {
+	.whither:active {
 		transition: 0s;
 		background: rgba(0, 0, 0, 0.19);
+	}
+	.mh-whither {
+		animation-name: mh-whither;
+		animation-duration: 0.7s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes mh-whither {
+		0% {visibility: visible; margin-left: 99px}
+		100% {visibility: visible; margin-left: 0px;}
+	}
+	.mho-whither {
+		animation-name: mho-whither;
+		animation-duration: 0.7s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes mho-whither {
+		0% {visibility: visible; margin-left: 0px}
+		100% {visibility: visible; margin-left: 99px;}
 	}
 	.more-back-cover {
 		width: 99px;
@@ -1758,7 +1799,7 @@
 <body>
 	<div class="page" id="page"><div class="box" id="box">
 		<div class="spotify" id="spotify"><p>spotify</p></div><div class="youtube" id="youtube"><p>youtube</p></div><div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p></div>
-		<div class="instagram" id="instagram"><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="more-box" id="more-box" onmouseenter="morehover()" onmouseleave="morehoveroff()"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more" id="more"><p>more</p></div></div>
+		<div class="instagram" id="instagram"><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="more-box" id="more-box" onmouseenter="morehover()" onmouseleave="morehoveroff()"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more" id="more"><p>more</p></div><div class="whither" id="whither"><p>&darr;</p></div></div>
 		<div class="left-cover"></div><div class="right-cover"></div>
 		<div class="e-links-background" id="e-links-background"></div>
 		<div class="e-music" id="e-music"><p>MUSIC</p></div>
@@ -1803,6 +1844,12 @@ function geckorevealreset() {
    element.classList.remove("gecko-reveal");
 }
 function morehover() {
+   var element = document.getElementById("more");
+   element.classList.remove("mho-more");
+   element.classList.add("mh-more");
+   var element = document.getElementById("whither");
+   element.classList.remove("mho-whither");
+   element.classList.add("mh-whither");
    var element = document.getElementById("about");
    element.classList.remove("mho-about");
    element.classList.add("mh-about");
@@ -1811,6 +1858,10 @@ function morehover() {
    element.classList.add("mh-downloads");
 }
 function morehoveroff() {
+   var element = document.getElementById("more");
+   element.classList.add("mho-more");
+   var element = document.getElementById("whither");
+   element.classList.add("mho-whither");
    var element = document.getElementById("about");
    element.classList.add("mho-about");
    var element = document.getElementById("downloads");
