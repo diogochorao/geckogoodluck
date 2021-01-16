@@ -619,6 +619,45 @@
 		0% {visibility: visible; margin-left: 0px}
 		100% {visibility: visible; margin-left: -99px;}
 	}
+	.arrow {
+		width: 34px;
+		height: 34px;
+		visibility: hidden;
+		border: none;
+		cursor: default;
+		overflow: hidden;
+		position: absolute;
+		top: 0%;
+		left: 50%;
+		margin-top: -34px;
+		margin-left: -17px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.7s;
+	}
+	.mh-arrow {
+		animation-name: mh-arrow;
+		animation-duration: 0.7s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes mh-arrow {
+		0% {visibility: visible; margin-top: -34px}
+		100% {visibility: visible; margin-top: 0px;}
+	}
+	.mho-arrow {
+		animation-name: mho-arrow;
+		animation-duration: 0.7s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes mho-arrow {
+		0% {visibility: visible; margin-top: 0px}
+		100% {visibility: visible; margin-top: -34px;}
+	}
 	.about {
 		width: 99px;
 		height: 34px;
@@ -1806,7 +1845,7 @@
 <body>
 	<div class="page" id="page"><div class="box" id="box">
 		<div class="spotify" id="spotify"><p>spotify</p></div><div class="youtube" id="youtube"><p>youtube</p></div><div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p></div>
-		<div class="instagram" id="instagram"><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="more-box" id="more-box" onmouseenter="morehover()" onmouseleave="morehoveroff()"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more-background"></div><div class="more" id="more"><p>more</p></div><div class="whither" id="whither"><p>&darr;</p></div></div>
+		<div class="instagram" id="instagram"><p>instagram</p></div><div class="contact" id="contact"><p>contact</p></div><div class="more-box" id="more-box" onmouseenter="morehover()" onmouseleave="morehoveroff()"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more-background"></div><div class="more" id="more"><p>more</p></div><div class="whither" id="whither"></div><div class="arrow" id="arrow"><p>&darr;</p></div></div>
 		<div class="left-cover"></div><div class="right-cover"></div>
 		<div class="e-links-background" id="e-links-background"></div>
 		<div class="e-music" id="e-music"><p>MUSIC</p></div>
@@ -1857,6 +1896,9 @@ function morehover() {
    var element = document.getElementById("whither");
    element.classList.remove("mho-whither");
    element.classList.add("mh-whither");
+   var element = document.getElementById("arrow");
+   element.classList.remove("mho-arrow");
+   element.classList.add("mh-arrow");
    var element = document.getElementById("about");
    element.classList.remove("mho-about");
    element.classList.add("mh-about");
@@ -1869,6 +1911,8 @@ function morehoveroff() {
    element.classList.add("mho-more");
    var element = document.getElementById("whither");
    element.classList.add("mho-whither");
+   var element = document.getElementById("arrow");
+   element.classList.add("mho-arrow");
    var element = document.getElementById("about");
    element.classList.add("mho-about");
    var element = document.getElementById("downloads");
