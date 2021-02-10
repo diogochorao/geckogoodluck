@@ -114,26 +114,12 @@
 		85.68% {color: #ffa3a3;}
 		100% {color: #d2afea;}
 	}
-	.title-text {
-		width: 313px;
-		height: 67px;
-		border: none;
-		position: absolute;
-		top: 0%;
-		left: 0%;
-		margin-top: 0px;
-		margin-left: 0px;
-		overflow: hidden;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.title-text p {
+	.title p {
 		display: inline-block;
 		position: relative;
 		transition: padding-right 0.7s;
 	}
-	.title-text p:after {
+	.title p:after {
 		content: '///';
 		letter-spacing: 3;
 		position: absolute;
@@ -142,10 +128,10 @@
 		right: -43px;
 		transition: opacity 0.7s, right 0.7s;
 	}
-	.title-text:hover p {
+	.title:hover p {
 		padding-right: 43px;
 	}
-	.title-text:hover p:after {
+	.title:hover p:after {
 		opacity: 1;
 		right: 0;
 	}
@@ -1868,7 +1854,7 @@
 		<div class="e-email" id="e-email"><p>email</p></div>
 		<div class="e-footer" id="e-footer"></div>
 		<div class="title-box" id="title-box" onclick="geckoreveal()"><div class="title">
-			<div class="title-text"><p>gecko good luck</p></div>
+			<p>gecko good luck</p>
 		</div></div>
 	</div></div>
 
