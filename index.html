@@ -5,7 +5,7 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 	<meta name="keywords" content="gecko good luck, gecko, good, luck, lofi, lo-fi, hip hop, hiphop, hip-hop, lofi hip hop, lofi hiphop, lofi hip-hop, lo-fi hip hop, lo-fi hiphop, lo-fi hip-hop, chillhop">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#000000">
+	<meta name="theme-color" content="#af9f8c">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<link rel="stylesheet"
@@ -62,15 +62,14 @@
 		0% {transform: rotate(-133deg); top: 133%;}
 		100% {transform: rotate(0deg); top: 50%;}
 	}
+	.title-box:hover {
+		background: rgba(0, 0, 0, 0.34);
+	}
 	.title {
-		width: 313px;
-		height: 67px;
+		width: 100%;
+		height: 100%;
 		border: none;
 		position: absolute;
-		top: 0%;
-		left: 0%;
-		margin-top: 0px;
-		margin-left: 0px;
 		font-size: 34px;
 		cursor: default;
 		overflow: hidden;
@@ -93,32 +92,11 @@
 		85.68% {color: #ffa3a3;}
 		100% {color: #d2afea;}
 	}
-	.title p {
-		display: inline-block;
-		position: relative;
-		transition: padding-right 0.7s;
-	}
-	.title p:after {
-		content: '///';
-		letter-spacing: 3;
-		position: absolute;
-		opacity: 0;
-		top: 0;
-		right: -43px;
-		transition: opacity 0.7s, right 0.7s;
-	}
-	.title:hover p {
-		padding-right: 43px;
-	}
-	.title:hover p:after {
-		opacity: 1;
-		right: 0;
-	}
 </style>
 </head>
 <body>
 	<div class="title-box" id="title-box"><div class="title">
-		<p>gecko good luck</p>
+		<p>gecko good luck <span style="letter-spacing: 3">///</span></p>
 	</div></div>
 </body>
 </html>
