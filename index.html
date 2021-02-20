@@ -99,23 +99,61 @@
 	<div class="title-box" id="title-box">
 		<div class="title"><p>gecko good luck <span style="letter-spacing: 3">///</span></p></div>
 	</div>
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script>
-var metaTag = $('meta[name="theme-color"]');
-var body = $('body');
-var hue = 0;
- 
-function animate() {
-    hue++;
- 
-    if (hue == 361) {
-        hue = 0;
-    }
-    metaTag.attr("content", 'hsl(' + parseInt(hue) + ',100%,50%)');
-    body.css({"backgroundColor": 'hsl(' + parseInt(hue) + ',100%,50%)'});
+var blue = "#2196F3";
+var red  = "#F44336";
+var teal = "#009688"
+var colors = [blue, red, teal];
+
+var currentColor = 0;
+var themeColor = document.querySelector('[name=theme-color]');
+var nextColor = function() {
+  currentColor = (currentColor + 1) % colors.length
+  return colors[currentColor];
 }
- 
-setInterval(animate, 16);
+
+var updateColor = function() {
+  var newColor = nextColor();
+  themeColor.content = newColor;
+  themeColor.setAttribute('content', newColor);
+  
+  // Debug
+  console.log('new color', themeColor.content);
+  document.body.innerHTML = themeColor.content;
+}
+
+var replaceColor = function() {
+  var newColor = nextColor();
+  
+  if (themeColor)
+    themeColor.remove();
+  
+  themeColor = document.createElement('meta');
+  themeColor.name = 'theme-color';
+  //themeColor.content = newColor;
+  themeColor.setAttribute('content', newColor);
+  
+  document.head.appendChild(themeColor);
+  
+  // Debug
+  console.log('new color', themeColor.content);
+  document.body.innerHTML = themeColor.content;
+}
+
+//themeColor.content = red;        // Works
+//themeColor.content = teal;       // Works
+
+//setInterval(replaceColor, 5);    // Works for a few iterations
+//setInterval(updateColor, 1000);  // Doesn't work
+//setInterval(replaceColor, 1000); // Doesn't work
+
+//setTimeout(updateColor, 0);      // Works
+//setTimeout(replaceColor, 50);    // Works
+//setTimeout(replaceColor, 100);   // Doesn't Works
+//setTimeout(replaceColor, 1000);  // Doesn't Works
+
+//window.addEventListener('click', updateColor);  // Doesn't work
+//window.addEventListener('click', replaceColor); // Doesn't work
 </script>
 </body>
 </html>
