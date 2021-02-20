@@ -5,6 +5,7 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 	<meta name="keywords" content="gecko good luck, gecko, good, luck, lofi, lo-fi, hip hop, hiphop, hip-hop, lofi hip hop, lofi hiphop, lofi hip-hop, lo-fi hip hop, lo-fi hiphop, lo-fi hip-hop, chillhop">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#87CEFA" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<link rel="stylesheet"
@@ -98,5 +99,18 @@
 	<div class="title-box" id="title-box">
 		<div class="title"><p>gecko good luck <span style="letter-spacing: 3">///</span></p></div>
 	</div>
+<script>
+var themeColorTest = new function() {
+  function e() {
+    "#87CEFA" === $themeColor.content ? $themeColor.content = "#1E90FF" : "#1E90FF" === $themeColor.content ? $themeColor.content = "#4169E1" : $themeColor.content = "#87CEFA",
+      setTimeout(e, 500)
+  }
+  this.init = function() {
+    $themeColor = document.querySelector("meta[name='theme-color']"),
+      e()
+  }
+};
+themeColorTest.init();
+</script>
 </body>
 </html>
