@@ -95,6 +95,24 @@
 </style>
 </head>
 <body>
+<script>
+RColor.default = 'pink';
+
+var steps = [{ background: 'red' }, { background: 'blue' }];
+var anim = RColor.animate(steps, { duration: 2000, iterations: 2 });
+anim.onfinish = function() {
+  console.info('done!');
+};
+
+var steps = ['rgb(255, 128, 0)', 'hsl(128, 80%, 100%)'];
+var anim = RColor.animate(steps, { duration: 1500, direction: 'reverse' });
+window.setTimeout(function() {
+  anim.pause();
+  window.setTimeout(function() {
+    anim.cancel();
+  }, 500);
+}, 500);
+</script>
 	<div class="title-box" id="title-box">
 		<div class="title"><p>gecko good luck <span style="letter-spacing: 3">///</span></p></div>
 	</div>
