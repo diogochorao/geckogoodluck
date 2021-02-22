@@ -32,7 +32,7 @@
 		0% {background: #d2afea;}
 		14.28% {background: #87b3e6;}
 		28.56% {background: #addfee;}
-		42.84% {background: #c9f1c9;}
+		42.84% {background: #bce3bc;}
 		57.12% {background: #e4e29d;}
 		71.40% {background: #fbcea0;}
 		85.68% {background: #ffa3a3;}
@@ -108,7 +108,7 @@
 		0% {color: #d2afea;}
 		14.28% {color: #87b3e6;}
 		28.56% {color: #addfee;}
-		42.84% {color: #c9f1c9;}
+		42.84% {color: #bce3bc;}
 		57.12% {color: #e4e29d;}
 		71.40% {color: #fbcea0;}
 		85.68% {color: #ffa3a3;}
@@ -871,18 +871,6 @@
 		35% {visibility: visible; top: 100%;}
 		100% {visibility: visible;}
 	}
-	.et-e-tidal {
-		animation-name: et-e-tidal;
-		animation-duration: 2s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes et-e-tidal {
-		0% {visibility: hidden; top: 100%;}
-		40% {visibility: visible; top: 100%;}
-		100% {visibility: visible;}
-	}
 	.et-e-soundcloud {
 		animation-name: et-e-soundcloud;
 		animation-duration: 2s;
@@ -907,40 +895,16 @@
 		50% {visibility: visible; top: 100%;}
 		100% {visibility: visible;}
 	}
-	.et-e-music-note-1 {
-		animation-name: et-e-music-note-1;
+	.et-e-also-everywhere-else {
+		animation-name: et-e-also-everywhere-else;
 		animation-duration: 2s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	@keyframes et-e-music-note-1 {
+	@keyframes et-e-also-everywhere-else {
 		0% {visibility: hidden; top: 100%;}
 		55% {visibility: visible; top: 100%;}
-		100% {visibility: visible;}
-	}
-	.et-e-music-note-2 {
-		animation-name: et-e-music-note-2;
-		animation-duration: 2s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes et-e-music-note-2 {
-		0% {visibility: hidden; top: 100%;}
-		60% {visibility: visible; top: 100%;}
-		100% {visibility: visible;}
-	}
-	.et-e-music-note-3 {
-		animation-name: et-e-music-note-3;
-		animation-duration: 2s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes et-e-music-note-3 {
-		0% {visibility: hidden; top: 100%;}
-		65% {visibility: visible; top: 100%;}
 		100% {visibility: visible;}
 	}
 	.et-e-divider-1 {
@@ -1302,51 +1266,6 @@
 		transition: 0s;
 		background: rgba(0, 0, 0, 0.19);
 	}
-	.e-tidal {
-		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
-		height: 34px;
-		visibility: hidden;
-		background: rgba(0, 0, 0, 0.13);
-		box-sizing: border-box;
-		border: none;
-		cursor: pointer;
-		overflow: hidden;
-		position: absolute;
-		top: 0%;
-		left: 50%;
-		margin-top: clamp(309px, calc(0.5 * (100vw - 313px) + 293px), 327px);
-		margin-left: calc(-156.5px + clamp(16px, calc(0.5 * (100vw - 313px)), 34px));
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		transition: 0.7s;
-	}
-	.e-tidal p {
-		cursor: pointer;
-		display: inline-block;
-		position: relative;
-		transition: 0.7s;
-	}
-	.e-tidal p:before {
-		content: '///';
-		letter-spacing: 1.5;
-		position: absolute;
-		opacity: 0;
-		top: 0;
-		left: -18px;
-		transition: 0.7s;
-	}
-	.e-tidal:hover p {
-		padding-left: 18px;
-	}
-	.e-tidal:hover p:before {
-		opacity: 1;
-		left: 0;
-	}
-	.e-tidal:active {
-		transition: 0s;
-		background: rgba(0, 0, 0, 0.19);
-	}
 	.e-soundcloud {
 		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
 		height: 34px;
@@ -1437,7 +1356,7 @@
 		transition: 0s;
 		background: rgba(0, 0, 0, 0.19);
 	}
-	.e-music-note-1 {
+	.e-also-everywhere-else {
 		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
 		height: 68px;
 		visibility: hidden;
@@ -1457,87 +1376,6 @@
 		align-items: center;
 		text-align: center;
 		padding: 8px;
-	}
-	.e-music-note-1 p {
-		animation-name: e-music-note-1-p;
-		animation-duration: 7s;
-		animation-iteration-count: infinite;
-		animation-timing-function: ease-in-out;
-		animation-fill-mode: none;
-	}
-	@keyframes e-music-note-1-p {
-		0% {transform: scale(1, 1);}
-		33.33% {transform: scale(1.1, 1.1);}
-		66.67% {transform: scale(1, 1);}
-		100% {transform: scale(1, 1);}
-	}
-	.e-music-note-2 {
-		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
-		height: 68px;
-		visibility: hidden;
-		background: rgba(0, 0, 0, 0.07);
-		color: rgba(0, 0, 0, 0.61);
-		box-sizing: border-box;
-		border: none;
-		cursor: default;
-		overflow: hidden;
-		position: absolute;
-		top: 0%;
-		left: 50%;
-		margin-top: clamp(511px, calc(0.5 * (100vw - 313px) + 495px), 529px);
-		margin-left: calc(-156.5px + clamp(16px, calc(0.5 * (100vw - 313px)), 34px));
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		padding: 8px;
-	}
-	.e-music-note-2 p {
-		animation-name: e-music-note-2-p;
-		animation-duration: 7s;
-		animation-iteration-count: infinite;
-		animation-timing-function: ease-in-out;
-		animation-fill-mode: none;
-	}
-	@keyframes e-music-note-2-p {
-		0% {transform: scale(1, 1);}
-		33.33% {transform: scale(1, 1);}
-		66.67% {transform: scale(1.1, 1.1);}
-		100% {transform: scale(1, 1);}
-	}
-	.e-music-note-3 {
-		width: clamp(245px, calc(313px - (100vw - 313px)), 281px);
-		height: 68px;
-		visibility: hidden;
-		background: rgba(0, 0, 0, 0.07);
-		color: rgba(0, 0, 0, 0.61);
-		box-sizing: border-box;
-		border: none;
-		cursor: default;
-		overflow: hidden;
-		position: absolute;
-		top: 0%;
-		left: 50%;
-		margin-top: clamp(587px, calc(0.5 * (100vw - 313px) + 571px), 605px);
-		margin-left: calc(-156.5px + clamp(16px, calc(0.5 * (100vw - 313px)), 34px));
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		padding: 8px;
-	}
-	.e-music-note-3 p {
-		animation-name: e-music-note-3-p;
-		animation-duration: 7s;
-		animation-iteration-count: infinite;
-		animation-timing-function: ease-in-out;
-		animation-fill-mode: none;
-	}
-	@keyframes e-music-note-3-p {
-		0% {transform: scale(1.1, 1.1);}
-		33.33% {transform: scale(1, 1);}
-		66.67% {transform: scale(1, 1);}
-		100% {transform: scale(1.1, 1.1);}
 	}
 	.e-divider-1-box {
 		width: 313px;
@@ -1838,12 +1676,9 @@
 		<div class="e-apple-music" id="e-apple-music"><p>apple music</p></div>
 		<div class="e-amazon-music" id="e-amazon-music"><p>amazon music</p></div>
 		<div class="e-youtube-music" id="e-youtube-music"><p>youtube music</p></div>
-		<div class="e-tidal" id="e-tidal"><p>tidal</p></div>
 		<div class="e-soundcloud" id="e-soundcloud"><p>soundcloud</p></div>
 		<div class="e-bandcamp" id="e-bandcamp"><p>bandcamp</p></div>
-		<div class="e-music-note-1" id="e-music-note-1"><p>also, everywhere else<br>(just search "gecko good luck")</p></div>
-		<div class="e-music-note-2" id="e-music-note-2"><p>available to use on<br>instagram and tiktok</p></div>
-		<div class="e-music-note-3" id="e-music-note-3"><p>free to use in youtube videos<br>(download links are here)</p></div>
+		<div class="e-also-everywhere-else" id="e-also-everywhere-else"><p>also, everywhere else<br>(just search "gecko good luck")</p></div>
 		<div class="e-divider-1-box" id="e-divider-1-box"><div class="e-divider-1" id="e-divider-1"></div></div>
 		<div class="e-videos" id="e-videos"><p>VIDEOS</p></div>
 		<div class="e-youtube" id="e-youtube"><p>youtube</p></div>
@@ -1922,18 +1757,12 @@ function everywheretransition() {
    element.classList.add("et-e-amazon-music");
    var element = document.getElementById("e-youtube-music");
    element.classList.add("et-e-youtube-music");
-   var element = document.getElementById("e-tidal");
-   element.classList.add("et-e-tidal");
    var element = document.getElementById("e-soundcloud");
    element.classList.add("et-e-soundcloud");
    var element = document.getElementById("e-bandcamp");
    element.classList.add("et-e-bandcamp");
-   var element = document.getElementById("e-music-note-1");
-   element.classList.add("et-e-music-note-1");
-   var element = document.getElementById("e-music-note-2");
-   element.classList.add("et-e-music-note-2");
-   var element = document.getElementById("e-music-note-3");
-   element.classList.add("et-e-music-note-3");
+   var element = document.getElementById("e-also-everywhere-else");
+   element.classList.add("et-e-also-everywhere-else");
    var element = document.getElementById("e-divider-1-box");
    element.classList.add("et-e-divider-1");
    var element = document.getElementById("e-videos");
