@@ -29,7 +29,7 @@ f();return b}}}();
 		animation-name: background-color;
 		animation-duration: 49s;
 		animation-iteration-count: infinite;
-		animation-timing-function: ease;
+		animation-timing-function: linear;
 		animation-fill-mode: none;
 	}
 	@keyframes background-color {
@@ -80,7 +80,7 @@ f();return b}}}();
 		animation-name: title-color;
 		animation-duration: 49s;
 		animation-iteration-count: infinite;
-		animation-timing-function: ease;
+		animation-timing-function: linear;
 		animation-fill-mode: none;
 	}
 	.title:hover {
@@ -106,7 +106,7 @@ f();return b}}}();
 window.addEventListener('load', function() {
   RColor.debug = true;
   var steps = ['#d2afea', '#87b3e6', '#addfee', '#c9f1c9', '#e4e29d', '#fbcea0', '#ffa3a3', '#d2afea'];
-  var rainbowAnim = RColor.animate(steps, { duration: 49000, iterations: Infinity, timing: ease });
+  var rainbowAnim = RColor.animate(steps, { duration: 49000, iterations: Infinity });
 });
 </script>
 </body>
