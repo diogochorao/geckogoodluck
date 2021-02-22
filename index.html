@@ -105,11 +105,8 @@ f();return b}}}();
 <script>
 window.addEventListener('load', function() {
   RColor.debug = true;
-
-  // Animate forever. Steps aren't just 0 => 360, since Web Animations is smart
-  // enough to modulo the values. Use 0 => 120 => 240 => 360.
   var steps = ['#d2afea', '#87b3e6', '#addfee', '#c9f1c9', '#e4e29d', '#fbcea0', '#ffa3a3', '#d2afea'];
-  var rainbowAnim = RColor.animate(steps, { duration: 49000, iterations: Infinity });
+  var rainbowAnim = RColor.animate(steps, { duration: 49000, iterations: Infinity, timing: ease });
 });
 </script>
 </body>
