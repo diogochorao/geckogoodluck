@@ -5,10 +5,10 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 	<meta name="keywords" content="gecko good luck, gecko, good, luck, lofi, lo-fi, hip hop, hiphop, hip-hop, lofi hip hop, lofi hiphop, lofi hip-hop, lo-fi hip hop, lo-fi hiphop, lo-fi hip-hop, chillhop">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color2" content="#3498db">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,300i,400,400i,500,500i,600,600i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap">
+	<script src="https://cdn.rawgit.com/samthor/rainbows/v0.1.1/rainbows.html"></script>
 <style>
 	html {
 	}
@@ -98,61 +98,5 @@
 	<div class="title-box" id="title-box">
 		<div class="title"><p>gecko good luck <span style="letter-spacing: 3">///</span></p></div>
 	</div>
-<script>
-var blue = "#2196F3";
-var red  = "#F44336";
-var teal = "#009688"
-var colors = [blue, red, teal];
-
-var currentColor = 0;
-var themeColor = document.querySelector('[name=theme-color]');
-var nextColor = function() {
-  currentColor = (currentColor + 1) % colors.length
-  return colors[currentColor];
-}
-
-var updateColor = function() {
-  var newColor = nextColor();
-  themeColor.content = newColor;
-  themeColor.setAttribute('content', newColor);
-  
-  // Debug
-  console.log('new color', themeColor.content);
-  document.body.innerHTML = themeColor.content;
-}
-
-var replaceColor = function() {
-  var newColor = nextColor();
-  
-  if (themeColor)
-    themeColor.remove();
-  
-  themeColor = document.createElement('meta');
-  themeColor.name = 'theme-color';
-  //themeColor.content = newColor;
-  themeColor.setAttribute('content', newColor);
-  
-  document.head.appendChild(themeColor);
-  
-  // Debug
-  console.log('new color', themeColor.content);
-  document.body.innerHTML = themeColor.content;
-}
-
-//themeColor.content = red;        // Works
-//themeColor.content = teal;       // Works
-
-//setInterval(replaceColor, 5);    // Works for a few iterations
-//setInterval(updateColor, 1000);  // Doesn't work
-//setInterval(replaceColor, 1000); // Doesn't work
-
-//setTimeout(updateColor, 0);      // Works
-//setTimeout(replaceColor, 50);    // Works
-//setTimeout(replaceColor, 100);   // Doesn't Works
-//setTimeout(replaceColor, 1000);  // Doesn't Works
-
-//window.addEventListener('click', updateColor);  // Doesn't work
-//window.addEventListener('click', replaceColor); // Doesn't work
-</script>
 </body>
 </html>
