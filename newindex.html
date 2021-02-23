@@ -170,6 +170,45 @@
 		83.72% {margin-left: 107px;}
 		100% {margin-left: 0px;}
 	}
+	.everywhere-gr-click-top {
+		width: 99px;
+		height: 34px;
+		visibility: hidden;
+		box-sizing: border-box;
+		border: none;
+		cursor: pointer;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+	.gr-everywhere-gr-click-top {
+		animation-name: gr-everywhere-gr-click-top;
+		animation-duration: 4.3s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes gr-everywhere-gr-click-top {
+		0% {visibility: hidden;}
+		6.97% {visibility: hidden;}
+		6.98% {visibility: visible;}
+		83.71% {visibility: visible;}
+		83.72% {visibility: hidden;}
+		100% {visibility: hidden;}
+	}
+	.gr-et-title {
+		animation-name: gr-et-title;
+		animation-duration: 0.3s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes gr-et-title {
+		0% {margin-left: 107px;}
+		100% {margin-left: 0px;}
+	}
 	.left-cover {
 		width: 67px;
 		height: 67px;
@@ -793,14 +832,14 @@
 		0% {visibility: visible; margin-top: 84px;}
 		100% {visibility: visible; margin-top: 0px;}
 	}
-	.et-title {
-		animation-name: et-title;
+	.et-title-box {
+		animation-name: et-title-box;
 		animation-duration: 1.2s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	@keyframes et-title {
+	@keyframes et-title-box {
 		0% {top: 50%; margin-top: -33.5px;}
 		25% {top: 50%; margin-top: 25px;}
 		100% {top: 0%; margin-top: clamp(16px, calc(0.5 * (100vw - 313px)), 34px);}
@@ -927,14 +966,14 @@
 		55% {visibility: visible; top: 100%;}
 		100% {visibility: visible;}
 	}
-	.et-e-divider-1 {
-		animation-name: et-e-divider-1;
+	.et-e-divider-1-box {
+		animation-name: et-e-divider-1-box;
 		animation-duration: 2s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	@keyframes et-e-divider-1 {
+	@keyframes et-e-divider-1-box {
 		0% {visibility: hidden; top: 100%;}
 		65% {visibility: visible; top: 100%;}
 		100% {visibility: visible;}
@@ -963,14 +1002,14 @@
 		75% {visibility: visible; top: 100%;}
 		100% {visibility: visible;}
 	}
-	.et-e-divider-2 {
-		animation-name: et-e-divider-2;
+	.et-e-divider-2-box {
+		animation-name: et-e-divider-2-box;
 		animation-duration: 2s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	@keyframes et-e-divider-2 {
+	@keyframes et-e-divider-2-box {
 		0% {visibility: hidden; top: 100%;}
 		75% {visibility: visible; top: 100%;}
 		100% {visibility: visible;}
@@ -1685,7 +1724,7 @@
 	<div class="page" id="page"><div class="box" id="box">
 		<div class="spotify" id="spotify"><p>spotify</p></div>
 		<div class="youtube" id="youtube"><p>youtube</p></div>
-		<div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p></div>
+		<div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p><div class="everywhere-gr-click-top" id="everywhere-gr-click-top" onclick="geckorevealeverywheretransition()"></div></div>
 		<div class="instagram" id="instagram"><p>instagram</p></div>
 		<div class="contact" id="contact"><p>contact</p></div>
 		<div class="more-box" id="more-box" onmouseenter="morehover()" onmouseleave="morehoveroff()"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more-background"><div class="more" id="more"><p>more</p></div></div><div class="whither" id="whither"></div><div class="arrow" id="arrow"><p>&darr;</p></div></div>
@@ -1715,13 +1754,21 @@
 
 <script>
 function geckoreveal() {
+   var element = document.getElementById("everywhere-gr-click-top");
+   element.classList.add("gr-everywhere-gr-click-top");
    var element = document.getElementById("title");
    element.classList.add("gecko-reveal");
    element.addEventListener("animationend", geckorevealreset);
 }
 function geckorevealreset() {
+   var element = document.getElementById("everywhere-gr-click-top");
+   element.classList.remove("gr-everywhere-gr-click-top");
    var element = document.getElementById("title");
    element.classList.remove("gecko-reveal");
+}
+function geckorevealeverywheretransition() {
+   var element = document.getElementById("title");
+   element.classList.add("gr-et-title");
 }
 function morehover() {
    var element = document.getElementById("more");
@@ -1754,7 +1801,7 @@ function morehoveroff() {
 }
 function everywheretransition() {
    var element = document.getElementById("title-box");
-   element.classList.add("et-title");
+   element.classList.add("et-title-box");
    var element = document.getElementById("spotify");
    element.classList.add("et-upper-buttons");
    var element = document.getElementById("youtube");
@@ -1784,13 +1831,13 @@ function everywheretransition() {
    var element = document.getElementById("e-also-everywhere-else");
    element.classList.add("et-e-also-everywhere-else");
    var element = document.getElementById("e-divider-1-box");
-   element.classList.add("et-e-divider-1");
+   element.classList.add("et-e-divider-1-box");
    var element = document.getElementById("e-videos");
    element.classList.add("et-e-videos");
    var element = document.getElementById("e-youtube");
    element.classList.add("et-e-youtube");
    var element = document.getElementById("e-divider-2-box");
-   element.classList.add("et-e-divider-2");
+   element.classList.add("et-e-divider-2-box");
    var element = document.getElementById("e-social-media-contact");
    element.classList.add("et-e-social-media-contact");
    var element = document.getElementById("e-instagram");
