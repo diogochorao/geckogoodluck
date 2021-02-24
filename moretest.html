@@ -709,7 +709,7 @@
 		position: absolute;
 		top: 0%;
 		left: 0%;
-		margin-top: 0px;
+		margin-top: -42px;
 		margin-left: 0px;
 		display: flex;
 		justify-content: center;
@@ -742,27 +742,8 @@
 		transition: 0s;
 		background: rgba(0, 0, 0, 0.19);
 	}
-	.mh-about {
-		animation-name: mh-about;
-		animation-duration: 0.7s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes mh-about {
-		0% {visibility: visible; margin-top: -42px}
-		100% {visibility: visible; margin-top: 42px;}
-	}
-	.mho-about {
-		animation-name: mho-about;
-		animation-duration: 0.7s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes mho-about {
-		0% {visibility: visible; margin-top: 42px}
-		100% {visibility: visible; margin-top: -42px;}
+	.more-box:hover > about {
+		margin-top: 42px;
 	}
 	.downloads {
 		width: 99px;
@@ -809,27 +790,8 @@
 		transition: 0s;
 		background: rgba(0, 0, 0, 0.19);
 	}
-	.mh-downloads {
-		animation-name: mh-downloads;
-		animation-duration: 0.7s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes mh-downloads {
-		0% {visibility: visible; margin-top: 0px;}
-		100% {visibility: visible; margin-top: 84px;}
-	}
-	.mho-downloads {
-		animation-name: mho-downloads;
-		animation-duration: 0.7s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes mho-downloads {
-		0% {visibility: visible; margin-top: 84px;}
-		100% {visibility: visible; margin-top: 0px;}
+	.more-box:hover > downloads {
+		margin-top: 84px;
 	}
 	.et-title-box {
 		animation-name: et-title-box;
@@ -1726,7 +1688,7 @@
 		<div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p><div class="everywhere-gr-click-top" id="everywhere-gr-click-top" onclick="geckorevealeverywheretransition()"></div></div>
 		<div class="instagram" id="instagram"><p>instagram</p></div>
 		<div class="contact" id="contact"><p>contact</p></div>
-		<div class="more-box" id="more-box" onmouseenter="morehover()" onmouseleave="morehoveroff()"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more-background"><div class="more" id="more"><p>more</p></div></div><div class="whither" id="whither"></div><div class="arrow" id="arrow"><p>&darr;</p></div></div>
+		<div class="more-box" id="more-box"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more-background"><div class="more" id="more"><p>more</p></div></div><div class="whither" id="whither"></div><div class="arrow" id="arrow"><p>&darr;</p></div></div>
 		<div class="left-cover"></div><div class="right-cover"></div>
 		<div class="e-links-background" id="e-links-background"></div>
 		<div class="e-music" id="e-music"><p>MUSIC</p></div>
@@ -1768,35 +1730,6 @@ function geckorevealreset() {
 function geckorevealeverywheretransition() {
    var element = document.getElementById("title");
    element.classList.add("gr-et-title");
-}
-function morehover() {
-   var element = document.getElementById("more");
-   element.classList.remove("mho-more");
-   element.classList.add("mh-more");
-   var element = document.getElementById("whither");
-   element.classList.remove("mho-whither");
-   element.classList.add("mh-whither");
-   var element = document.getElementById("arrow");
-   element.classList.remove("mho-arrow");
-   element.classList.add("mh-arrow");
-   var element = document.getElementById("about");
-   element.classList.remove("mho-about");
-   element.classList.add("mh-about");
-   var element = document.getElementById("downloads");
-   element.classList.remove("mho-downloads");
-   element.classList.add("mh-downloads");
-}
-function morehoveroff() {
-   var element = document.getElementById("more");
-   element.classList.add("mho-more");
-   var element = document.getElementById("whither");
-   element.classList.add("mho-whither");
-   var element = document.getElementById("arrow");
-   element.classList.add("mho-arrow");
-   var element = document.getElementById("about");
-   element.classList.add("mho-about");
-   var element = document.getElementById("downloads");
-   element.classList.add("mho-downloads");
 }
 function everywheretransition() {
    var element = document.getElementById("title-box");
