@@ -530,11 +530,7 @@
 		left: 50%;
 		margin-top: 41.5px;
 		margin-left: 57.5px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		transition: 0.7s;
-		transition-timing-function: ease;
 		animation-name: more-box-entrance;
 		animation-delay: 4.5s;
 		animation-duration: 1s;
@@ -559,6 +555,7 @@
 		left: 0%;
 		margin-top: 0px;
 		margin-left: 0px;
+		transition-property: none;
 		animation-name: background-color;
 		animation-duration: 49s;
 		animation-iteration-count: infinite;
@@ -591,31 +588,11 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		transition: 0.7s;
+		transition: 0.35s;
+		transition-delay: 0.35s;
 	}
-	.mh-more {
-		animation-name: mh-more;
-		animation-duration: 0.7s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes mh-more {
-		0% {visibility: visible; margin-top: 0px;}
-		50% {visibility: visible; margin-top: 0px;}
-		100% {visibility: visible; margin-top: 25px;}
-	}
-	.mho-more {
-		animation-name: mho-more;
-		animation-duration: 0.7s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes mho-more {
-		0% {visibility: visible; margin-top: 25px;}
-		50% {visibility: visible; margin-top: 25px;}
-		100% {visibility: visible; margin-top: 0px;}
+	.more-box:hover .more {
+		margin-top: 34px;
 	}
 	.whither {
 		width: 99px;
@@ -632,72 +609,30 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		transition: 0.7s;
+		transition: 0.35s;
+		transition-delay: 0.35s;
 	}
-	.mh-whither {
-		animation-name: mh-whither;
-		animation-duration: 0.7s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes mh-whither {
-		0% {visibility: visible; margin-top: -34px}
-		100% {visibility: visible; margin-top: 0px;}
-	}
-	.mho-whither {
-		animation-name: mho-whither;
-		animation-duration: 0.7s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes mho-whither {
-		0% {visibility: visible; margin-top: 0px}
-		100% {visibility: visible; margin-top: -34px;}
+	.more-box:hover .whither {
+		visibility: visible;
+		margin-top: 0px;
 	}
 	.arrow {
 		width: 34px;
 		height: 34px;
-		visibility: hidden;
 		border: none;
 		cursor: default;
 		overflow: hidden;
 		position: absolute;
 		top: 0%;
 		left: 50%;
-		margin-top: -34px;
+		margin-top: 0px;
 		margin-left: -17px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		transition: 0.7s;
 	}
-	.mh-arrow {
-		animation-name: mh-arrow;
-		animation-duration: 0.7s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes mh-arrow {
-		0% {visibility: visible; margin-top: -25px;}
-		50% {visibility: visible; margin-top: -25px;}
-		100% {visibility: visible; margin-top: 0px;}
-	}
-	.mho-arrow {
-		animation-name: mho-arrow;
-		animation-duration: 0.7s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes mho-arrow {
-		0% {visibility: visible; margin-top: 0px;}
-		50% {visibility: visible; margin-top: 0px;}
-		100% {visibility: visible; margin-top: -25px;}
-	}
-	.more-box > .about {
+	.about {
 		width: 99px;
 		height: 34px;
 		visibility: hidden;
@@ -716,13 +651,13 @@
 		align-items: center;
 		transition: 0.7s;
 	}
-	.more-box > .about p {
+	.about p {
 		cursor: pointer;
 		display: inline-block;
 		position: relative;
 		transition: 0.7s;
 	}
-	.more-box > .about p:before {
+	.about p:before {
 		content: '///';
 		letter-spacing: 1.5px;
 		position: absolute;
@@ -731,21 +666,22 @@
 		left: -18px;
 		transition: 0.7s;
 	}
-	.more-box > .about:hover p {
+	.about:hover p {
 		padding-left: 18px;
 	}
-	.more-box > .about:hover p:before {
+	.about:hover p:before {
 		opacity: 1;
 		left: 0;
 	}
-	.more-box > .about:active {
+	.about:active {
 		transition: 0s;
 		background: rgba(0, 0, 0, 0.19);
 	}
-	.more-box:hover > .about {
+	.more-box:hover .about {
+		visibility: visible;
 		margin-top: 42px;
 	}
-	.more-box > .downloads {
+	.downloads {
 		width: 99px;
 		height: 34px;
 		visibility: hidden;
@@ -764,13 +700,13 @@
 		align-items: center;
 		transition: 0.7s;
 	}
-	.more-box > .downloads p {
+	.downloads p {
 		cursor: pointer;
 		display: inline-block;
 		position: relative;
 		transition: 0.7s;
 	}
-	.more-box > .downloads p:before {
+	.downloads p:before {
 		content: '///';
 		letter-spacing: 1.5px;
 		position: absolute;
@@ -779,18 +715,19 @@
 		left: -18px;
 		transition: 0.7s;
 	}
-	.more-box > .downloads:hover p {
+	.downloads:hover p {
 		padding-left: 18px;
 	}
-	.more-box > .downloads:hover p:before {
+	.downloads:hover p:before {
 		opacity: 1;
 		left: 0;
 	}
-	.more-box > .downloads:active {
+	.downloads:active {
 		transition: 0s;
 		background: rgba(0, 0, 0, 0.19);
 	}
-	.more-box:hover > .downloads {
+	.more-box:hover .downloads {
+		visibility: visible;
 		margin-top: 84px;
 	}
 	.et-title-box {
@@ -1688,7 +1625,7 @@
 		<div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p><div class="everywhere-gr-click-top" id="everywhere-gr-click-top" onclick="geckorevealeverywheretransition()"></div></div>
 		<div class="instagram" id="instagram"><p>instagram</p></div>
 		<div class="contact" id="contact"><p>contact</p></div>
-		<div class="more-box" id="more-box"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more-background"><div class="more" id="more"><p>more</p></div></div><div class="whither" id="whither"></div><div class="arrow" id="arrow"><p>&darr;</p></div></div>
+		<div class="more-box" id="more-box"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more-background"><div class="whither" id="whither"><div class="arrow" id="arrow"><p>&darr;</p></div></div><div class="more" id="more"><p>more</p></div></div></div>
 		<div class="left-cover"></div><div class="right-cover"></div>
 		<div class="e-links-background" id="e-links-background"></div>
 		<div class="e-music" id="e-music"><p>MUSIC</p></div>
