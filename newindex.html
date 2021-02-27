@@ -741,6 +741,17 @@
 		25% {top: 50%; margin-top: 25px;}
 		100% {top: 0%; margin-top: clamp(16px, calc(0.5 * (100vw - 313px)), 34px);}
 	}
+	.et-title-click-top {
+		animation-name: et-title-click-top;
+		animation-duration: 0.001s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes et-title-click-top {
+		0% {visibility: hidden;}
+		100% {visibility: hidden;}
+	}
 	.et-upper-buttons {
 		animation-name: et-upper-buttons;
 		animation-delay: 0s;
@@ -1624,7 +1635,7 @@
 		<div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p><div class="everywhere-gr-click-top" id="everywhere-gr-click-top" onclick="geckorevealeverywheretransition()"></div></div>
 		<div class="instagram" id="instagram"><p>instagram</p></div>
 		<div class="contact" id="contact"><p>contact</p></div>
-		<div class="more-box" id="more-box"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more-background"><div class="whither" id="whither"><div class="arrow" id="arrow"><p>&darr;</p></div></div><div class="more" id="more"><p>more</p></div></div></div>
+		<div class="more-box" id="more-box"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more-background"><div class="whither" id="whither"><div class="arrow" id="arrow"><p>&darr;</p></div></div><div class="more" id="more"><p>+</p></div></div></div>
 		<div class="left-cover"></div><div class="right-cover"></div>
 		<div class="e-links-background" id="e-links-background"></div>
 		<div class="e-music" id="e-music"><p>MUSIC</p></div>
@@ -1670,6 +1681,8 @@ function geckorevealeverywheretransition() {
 function everywheretransition() {
    var element = document.getElementById("title-box");
    element.classList.add("et-title-box");
+   var element = document.getElementById("title-click-top");
+   element.classList.add("et-title-click-top");
    var element = document.getElementById("spotify");
    element.classList.add("et-upper-buttons");
    var element = document.getElementById("youtube");
