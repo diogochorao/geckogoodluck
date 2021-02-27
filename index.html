@@ -39,6 +39,16 @@
 		85.68% {background: #ffa3a3;}
 		100% {background: #d2afea;}
 	}
+	.page {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	.title-box {
 		width: 313px;
 		height: 67px;
@@ -96,8 +106,10 @@
 </style>
 </head>
 <body>
-	<div class="title-box" id="title-box">
-		<div class="title"><p>gecko good luck <span style="letter-spacing: 3px">///</span></p></div>
+	<div class="page">
+		<div class="title-box" id="title-box">
+			<div class="title"><p>gecko good luck <span style="letter-spacing: 3px">///</span></p></div>
+		</div>
 	</div>
 </body>
 </html>
