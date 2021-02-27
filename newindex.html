@@ -147,7 +147,7 @@
 		margin-left: 0px;
 		cursor: default;
 		animation-name: title-click-top-entrance;
-		animation-duration: 4.3s;
+		animation-duration: 4.6s;
 		animation-iteration-count: 1;
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
@@ -982,6 +982,31 @@
 		95% {visibility: visible; top: 100%;}
 		100% {visibility: visible;}
 	}
+	.et-e-links-background {
+		animation-name: et-e-links-background;
+		animation-duration: 2s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes et-e-links-background {
+		0% {visibility: hidden; opacity: 0; height: 0px; top: 50%; margin-top: 25px;}
+		37% {visibility: visible; opacity: 0; height: 0px; top: 50%; margin-top: 25px;}
+		100% {visibility: visible; opacity: 1;}
+	}
+	.et-e-title-click-top {
+		animation-name: et-e-title-click-top;
+		animation-delay: 0s;
+		animation-duration: 2s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes et-e-title-click-top {
+		0% {visibility: hidden;}
+		99.99% {visibility: hidden;}
+		100% {visibility: visible;}
+	}
 	.et-page {
 		animation-name: et-page;
 		animation-delay: 0s;
@@ -1008,17 +1033,17 @@
 		99.99% {position: fixed}
 		100% {position: static}
 	}
-	.et-e-links-background {
-		animation-name: et-e-links-background;
-		animation-duration: 2s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes et-e-links-background {
-		0% {visibility: hidden; opacity: 0; height: 0px; top: 50%; margin-top: 25px;}
-		37% {visibility: visible; opacity: 0; height: 0px; top: 50%; margin-top: 25px;}
-		100% {visibility: visible; opacity: 1;}
+	.e-title-click-top {
+		width: 313px;
+		height: 67px;
+		visibility: hidden;
+		border: none;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		margin-top: 0px;
+		margin-left: 0px;
+		cursor: pointer;
 	}
 	.e-links-background {
 		width: 313px;
@@ -1657,7 +1682,7 @@
 		<div class="e-footer" id="e-footer"></div>
 		<div class="title-box" id="title-box"><div class="title" id="title">
 			<p>gecko good luck</p>
-		<div class="title-click-top" id="title-click-top" onclick="geckoreveal()"></div></div></div>
+		<div class="title-click-top" id="title-click-top" onclick="geckoreveal()"></div><div class="e-title-click-top" id="e-title-click-top"></div></div></div>
 	</div></div>
 
 <script>
@@ -1729,12 +1754,14 @@ function everywheretransition() {
    element.classList.add("et-e-email");
    var element = document.getElementById("e-footer");
    element.classList.add("et-e-footer");
+   var element = document.getElementById("e-links-background");
+   element.classList.add("et-e-links-background");
+   var element = document.getElementById("e-title-click-top");
+   element.classList.add("et-e-title-click-top");
    var element = document.getElementById("page");
    element.classList.add("et-page");
    var element = document.getElementById("box");
    element.classList.add("et-box");
-   var element = document.getElementById("e-links-background");
-   element.classList.add("et-e-links-background");
 }
 </script>
 </body>
