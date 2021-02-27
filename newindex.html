@@ -207,34 +207,6 @@
 		0% {margin-left: 107px;}
 		100% {margin-left: 0px;}
 	}
-	.left-cover {
-		width: 67px;
-		height: 67px;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-top: -33.5px;
-		margin-left: -223.5px;
-		animation-name: background-color;
-		animation-duration: 49s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		animation-fill-mode: none;
-	}
-	.right-cover {
-		width: 67px;
-		height: 67px;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-top: -33.5px;
-		margin-left: 156.5px;
-		animation-name: background-color;
-		animation-duration: 49s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		animation-fill-mode: none;
-	}
 	@keyframes upper-buttons-entrance {
 		0% {visibility: visible; margin-top: -17px; transform: rotate(-19deg);}
 		100% {visibility: visible; margin-top: -75.5px;}
@@ -587,8 +559,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		transition: 0.35s;
-		transition-delay: 0.35s;
+		transition: 0.7s;
 	}
 	.more-box:hover .more {
 		margin-top: 34px;
@@ -608,8 +579,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		transition: 0.35s;
-		transition-delay: 0.35s;
+		transition: 0.7s;
 	}
 	.more-box:hover .whither {
 		visibility: visible;
@@ -629,7 +599,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		transition: 0.7s;
 	}
 	.about {
 		width: 99px;
@@ -1660,8 +1629,17 @@
 		<div class="everywhere" id="everywhere" onclick="everywheretransition()"><p>everywhere</p><div class="everywhere-gr-click-top" id="everywhere-gr-click-top" onclick="geckorevealeverywheretransition()"></div></div>
 		<div class="instagram" id="instagram"><p>instagram</p></div>
 		<div class="contact" id="contact"><p>contact</p></div>
-		<div class="more-box" id="more-box"><div class="downloads" id="downloads"><p>downloads</p></div><div class="about" id="about"><p>about</p></div><div class="more-back-cover"></div><div class="more-background"><div class="whither" id="whither"><div class="arrow" id="arrow"><p>&darr;</p></div></div><div class="more" id="more"><p>+</p></div></div></div>
-		<div class="left-cover"></div><div class="right-cover"></div>
+		<div class="more-box" id="more-box">
+			<div class="downloads" id="downloads"><p>downloads</p></div>
+			<div class="about" id="about"><p>about</p></div>
+			<div class="more-back-cover"></div>
+			<div class="more-background">
+				<div class="whither" id="whither">
+					<div class="arrow" id="arrow"><p>&darr;</p></div>
+				</div>
+				<div class="more" id="more"><p>+</p></div>
+			</div>
+		</div>
 		<div class="e-links-background" id="e-links-background"></div>
 		<div class="e-music" id="e-music"><p>MUSIC</p></div>
 		<div class="e-spotify" id="e-spotify"><p>spotify</p></div>
