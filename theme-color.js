@@ -3,7 +3,7 @@ function(){document.body.appendChild(d)});var g=0;return{set debug(a){a?d.setAtt
 f();return b}}}();
 
 window.addEventListener('load', function() {
-  RColor.debug = true;
-  var steps = ['#d2afea', '#87b3e6', '#addfee', '#bce3bc', '#e4e29d', '#fbcea0', '#ffa3a3', '#d2afea'];
-  var rainbowAnim = RColor.animate(steps, { duration: 49000, iterations: Infinity });
+	RColor.debug = true;
+	var steps = ['#d2afea', '#87b3e6', '#addfee', '#bce3bc', '#e4e29d', '#fbcea0', '#ffa3a3', '#d2afea'];
+	var rainbowAnim = RColor.animate(steps, { duration: 49000, iterations: Infinity });
 });
