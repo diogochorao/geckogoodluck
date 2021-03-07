@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,300i,400,400i,500,500i,600,600i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap">
 	<script src="theme-color.js"></script>
 <style>
+			/* GENERAL */
 	html {
 	}
 	body {
@@ -24,21 +25,6 @@
 		font-style: italic;
 		color: rgba(0, 0, 0, 0.67);
 		user-select: none;
-		animation-name: background-color;
-		animation-duration: 49s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		animation-fill-mode: none;
-	}
-	@keyframes background-color {
-		0% {background: #d2afea;}
-		14.28% {background: #87b3e6;}
-		28.56% {background: #addfee;}
-		42.84% {background: #bce3bc;}
-		57.12% {background: #e4e29d;}
-		71.40% {background: #fbcea0;}
-		85.68% {background: #ffa3a3;}
-		100% {background: #d2afea;}
 	}
 	.page {
 		width: 100%;
@@ -62,6 +48,124 @@
 		justify-content: center;
 		align-items: center;
 	}
+	
+			/* START-UP */
+	.background-color { /* for: body, .more-back-cover, .e-divider-1, .e-divider-2 */
+		animation-name: background-color;
+		animation-duration: 49s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		animation-fill-mode: none;
+	}
+	@keyframes background-color {
+		0% {background: #d2afea;}
+		14.28% {background: #87b3e6;}
+		28.56% {background: #addfee;}
+		42.84% {background: #bce3bc;}
+		57.12% {background: #e4e29d;}
+		71.40% {background: #fbcea0;}
+		85.68% {background: #ffa3a3;}
+		100% {background: #d2afea;}
+	}
+	.title-entrance { /* for: .title-box */
+		animation-name: title-entrance;
+		animation-duration: 3s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-out;
+		animation-fill-mode: forwards;
+	}
+	@keyframes title-entrance {
+		0% {transform: rotate(-133deg); top: 133%;}
+		100% {transform: rotate(0deg); top: 50%;}
+	}
+	.title-color { /* for: .title p */
+		animation-name: title-color;
+		animation-duration: 49s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		animation-fill-mode: none;
+	}
+	@keyframes title-color {
+		0% {color: #d2afea;}
+		14.28% {color: #87b3e6;}
+		28.56% {color: #addfee;}
+		42.84% {color: #bce3bc;}
+		57.12% {color: #e4e29d;}
+		71.40% {color: #fbcea0;}
+		85.68% {color: #ffa3a3;}
+		100% {color: #d2afea;}
+	}
+	.title-click-top-entrance {
+		animation-name: title-click-top-entrance;
+		animation-duration: 4.6s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes title-click-top-entrance {
+		0% {visibility: hidden;}
+		99.99% {visibility: hidden;}
+		100% {visibility: visible;}
+	}
+	@keyframes upper-buttons-entrance {
+		0% {visibility: visible; margin-top: -17px; transform: rotate(-19deg);}
+		100% {visibility: visible; margin-top: -75.5px;}
+	}
+	.spotify-entrance {
+		animation-name: upper-buttons-entrance;
+		animation-delay: 3s;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	.youtube-entrance {
+		animation-name: upper-buttons-entrance;
+		animation-delay: 3.3s;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	.everywhere-entrance {
+		animation-name: upper-buttons-entrance;
+		animation-delay: 3.6s;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	@keyframes lower-buttons-entrance {
+		0% {visibility: visible; margin-top: -17px; transform: rotate(19deg);}
+		100% {visibility: visible; margin-top: 41.5px;}
+	}
+	.instagram-entrance {
+		animation-name: lower-buttons-entrance;
+		animation-delay: 3.9s;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	.contact-entrance {
+		animation-name: lower-buttons-entrance;
+		animation-delay: 4.2s;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	.more-box-entrance {
+		animation-name: lower-buttons-entrance;
+		animation-delay: 4.5s;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	
+			/* HOME
+				- TITLE */
 	.title-box {
 		width: 313px;
 		height: 67px;
@@ -74,15 +178,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		animation-name: title-entrance;
-		animation-duration: 3s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease-out;
-		animation-fill-mode: forwards;
-	}
-	@keyframes title-entrance {
-		0% {transform: rotate(-133deg); top: 133%;}
-		100% {transform: rotate(0deg); top: 50%;}
 	}
 	.title {
 		width: 313px;
@@ -105,11 +200,6 @@
 		display: inline-block;
 		position: relative;
 		transition: padding-right 0.7s;
-		animation-name: title-color;
-		animation-duration: 49s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		animation-fill-mode: none;
 	}
 	.title p:after {
 		content: '///';
@@ -127,16 +217,6 @@
 		opacity: 1;
 		right: 0;
 	}
-	@keyframes title-color {
-		0% {color: #d2afea;}
-		14.28% {color: #87b3e6;}
-		28.56% {color: #addfee;}
-		42.84% {color: #bce3bc;}
-		57.12% {color: #e4e29d;}
-		71.40% {color: #fbcea0;}
-		85.68% {color: #ffa3a3;}
-		100% {color: #d2afea;}
-	}
 	.title-click-top {
 		width: 313px;
 		height: 67px;
@@ -148,17 +228,10 @@
 		margin-top: 0px;
 		margin-left: 0px;
 		cursor: default;
-		animation-name: title-click-top-entrance;
-		animation-duration: 4.6s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
 	}
-	@keyframes title-click-top-entrance {
-		0% {visibility: hidden;}
-		99.99% {visibility: hidden;}
-		100% {visibility: visible;}
-	}
+	
+			/* HOME
+				- GECKO REVEAL */
 	.gecko-reveal {
 		animation-name: gecko-reveal;
 		animation-duration: 4.3s;
@@ -209,14 +282,9 @@
 		0% {margin-left: 107px;}
 		100% {margin-left: 0px;}
 	}
-	@keyframes upper-buttons-entrance {
-		0% {visibility: visible; margin-top: -17px; transform: rotate(-19deg);}
-		100% {visibility: visible; margin-top: -75.5px;}
-	}
-	@keyframes lower-buttons-entrance {
-		0% {visibility: visible; margin-top: -17px; transform: rotate(19deg);}
-		100% {visibility: visible; margin-top: 41.5px;}
-	}
+	
+			/* HOME
+				- BUTTONS */
 	.button {
 		width: 99px;
 		height: 34px;
@@ -264,45 +332,15 @@
 		margin-top: -75.5px;
 		margin-left: -156.5px;
 		transform-origin: top center;
-		animation-name: spotify-entrance;
-		animation-delay: 3s;
-		animation-duration: 1s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes spotify-entrance {
-		0% {visibility: visible; margin-top: -17px; transform: rotate(-19deg);}
-		100% {visibility: visible; margin-top: -75.5px;}
 	}
 	#youtube {
 		margin-top: -75.5px;
 		margin-left: -49.5px;
-		animation-name: youtube-entrance;
-		animation-delay: 3.3s;
-		animation-duration: 1s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes youtube-entrance {
-		0% {visibility: visible; margin-top: -17px; transform: rotate(-19deg);}
-		100% {visibility: visible; margin-top: -75.5px;}
 	}
 	#everywhere {
 		margin-top: -75.5px;
 		margin-left: 57.5px;
 		transform-origin: bottom center;
-		animation-name: everywhere-entrance;
-		animation-delay: 3.6s;
-		animation-duration: 1s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes everywhere-entrance {
-		0% {visibility: visible; margin-top: -17px; transform: rotate(-19deg);}
-		100% {visibility: visible; margin-top: -75.5px;}
 	}
 	#everywhere p {
 		cursor: pointer;
@@ -330,30 +368,10 @@
 		margin-top: 41.5px;
 		margin-left: -156.5px;
 		transform-origin: bottom center;
-		animation-name: instagram-entrance;
-		animation-delay: 3.9s;
-		animation-duration: 1s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes instagram-entrance {
-		0% {visibility: visible; margin-top: -17px; transform: rotate(19deg);}
-		100% {visibility: visible; margin-top: 41.5px;}
 	}
 	#contact {
 		margin-top: 41.5px;
 		margin-left: -49.5px;
-		animation-name: contact-entrance;
-		animation-delay: 4.2s;
-		animation-duration: 1s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes contact-entrance {
-		0% {visibility: visible; margin-top: -17px; transform: rotate(19deg);}
-		100% {visibility: visible; margin-top: 41.5px;}
 	}
 	.more-box {
 		width: 99px;
@@ -368,16 +386,6 @@
 		margin-left: 57.5px;
 		transition: 0.7s;
 		transform-origin: top center;
-		animation-name: more-box-entrance;
-		animation-delay: 4.5s;
-		animation-duration: 1s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes more-box-entrance {
-		0% {visibility: visible; margin-top: -17px; transform: rotate(19deg);}
-		100% {visibility: visible; margin-top: 41.5px;}
 	}
 	.more-box:hover {
 		height: 118px;
@@ -393,11 +401,6 @@
 		margin-top: 0px;
 		margin-left: 0px;
 		transition-property: none;
-		animation-name: background-color;
-		animation-duration: 49s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		animation-fill-mode: none;
 	}
 	.more-background {
 		width: 99px;
@@ -486,6 +489,8 @@
 		visibility: visible;
 		margin-top: 84px;
 	}
+	
+			/* EVERYWHERE TRANSITION */
 	.et-title-box {
 		animation-name: et-title-box;
 		animation-duration: 1.2s;
@@ -790,6 +795,8 @@
 		99.99% {position: fixed}
 		100% {position: static}
 	}
+	
+			/* EVERYWHERE */
 	.e-title-click-top {
 		width: 313px;
 		height: 67px;
@@ -1144,11 +1151,6 @@
 		left: 0%;
 		margin-top: 0px;
 		margin-left: 0px;
-		animation-name: background-color;
-		animation-duration: 49s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		animation-fill-mode: none;
 	}
 	.e-videos {
 		width: 313px;
@@ -1235,11 +1237,6 @@
 		left: 0%;
 		margin-top: 0px;
 		margin-left: 0px;
-		animation-name: background-color;
-		animation-duration: 49s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		animation-fill-mode: none;
 	}
 	.e-social-media-contact {
 		width: 313px;
