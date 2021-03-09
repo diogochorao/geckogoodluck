@@ -1407,7 +1407,7 @@
 	}
 </style>
 </head>
-<body>
+<body id="body">
 	<div class="page" id="page"><div class="box" id="box">
 		<div class="button" id="spotify"><p>spotify</p></div>
 		<div class="button" id="youtube"><p>youtube</p></div>
@@ -1417,7 +1417,7 @@
 		<div class="more-box" id="more-box">
 			<div class="button" id="downloads"><p>downloads</p></div>
 			<div class="button" id="about"><p>about</p></div>
-			<div class="more-back-cover"></div>
+			<div class="more-back-cover" id="more-back-cover"></div>
 			<div class="more-background">
 				<div class="whither" id="whither">
 					<div class="arrow" id="arrow"><p>&darr;</p></div>
@@ -1444,11 +1444,39 @@
 		<div class="e-email" id="e-email"><p>email</p></div>
 		<div class="e-footer" id="e-footer"></div>
 		<div class="title-box" id="title-box"><div class="title" id="title">
-			<p>gecko good luck</p>
+			<p id="title-p">gecko good luck</p>
 		<div class="title-click-top" id="title-click-top" onclick="geckoreveal()"></div><div class="e-title-click-top" id="e-title-click-top"></div></div></div>
 	</div></div>
 
 <script>
+function startup() {
+   var element = document.getElementById("body");
+   element.classList.add("background-color");
+   var element = document.getElementById("more-back-cover");
+   element.classList.add("background-color");
+   var element = document.getElementById("e-divider-1");
+   element.classList.add("background-color");
+   var element = document.getElementById("e-divider-2");
+   element.classList.add("background-color");
+   var element = document.getElementById("title-box");
+   element.classList.add("title-entrance");
+   var element = document.getElementById("title-p");
+   element.classList.add("title-color");
+   var element = document.getElementById("title-click-top");
+   element.classList.add("title-click-top-entrance");
+   var element = document.getElementById("spotify");
+   element.classList.add("spotify-entrance");
+   var element = document.getElementById("youtube");
+   element.classList.add("youtube-entrance");
+   var element = document.getElementById("everywhere");
+   element.classList.add("everywhere-entrance");
+   var element = document.getElementById("instagram");
+   element.classList.add("instagram-entrance");
+   var element = document.getElementById("contact");
+   element.classList.add("contact-entrance");
+   var element = document.getElementById("more-box");
+   element.classList.add("more-box-entrance");
+}
 function geckoreveal() {
    var element = document.getElementById("everywhere-gr-click-top");
    element.classList.add("gr-everywhere-gr-click-top");
