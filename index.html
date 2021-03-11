@@ -6,6 +6,7 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<meta name="keywords" content="gecko good luck, gecko, good, luck, lofi, lo-fi, hip hop, hiphop, hip-hop, lofi hip hop, lofi hiphop, lofi hip-hop, lo-fi hip hop, lo-fi hiphop, lo-fi hip-hop, chillhop">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#d2afea">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,300i,400,400i,500,500i,600,600i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap">
@@ -16,6 +17,7 @@
 	body {
 		padding: 0px;
 		margin: 0px;
+		background: #d2afea;
 		font-family: Zilla Slab, Helvetica, Arial, sans-serif;
 		font-weight: 300;
 		font-size: 16px;
@@ -110,5 +112,16 @@
 			<div class="title"><p>gecko good luck <span style="letter-spacing: 3px">///</span></p></div>
 		</div>
 	</div>
+<script>
+var RColor=function(){function h(a){if(a){var c;(c=b)||(c=document.querySelector('meta[name="theme-color"]'),null==c&&(c=document.createElement("meta"),c.name="theme-color",document.head.appendChild(c)));b=c;b.content=a}else b&&(b.parentNode.removeChild(b),b=null)}function f(){if(g){var a=window.getComputedStyle(d);h(a.backgroundColor);window.requestAnimationFrame(f)}else h(d.style.background)}var b=null,d=document.createElement("div");d.setAttribute("style","visibility: hidden; display: none");window.addEventListener("load",
+function(){document.body.appendChild(d)});var g=0;return{set debug(a){a?d.setAttribute("style","width: 67px; height: 67px; position: fixed; right: 0; top: 0; visibility: hidden; display:none;"):d.setAttribute("style","visibility: hidden; display: none")},set default(a){d.style.background=""+a;f()},animate:function(a,c){a=a.map(function(a){return"string"==typeof a?{background:a}:a});var b=d.animate(a,c);++g;var e=null;b.onfinish=function(){--g;e&&e()};Object.defineProperty(b,"onfinish",{get:function(){return e},set:function(a){e=a}});
+f();return b}}}();
+window.addEventListener("load", startup);
+function startup() {
+	RColor.debug = true;
+	var steps = ['#d2afea', '#87b3e6', '#addfee', '#bce3bc', '#e4e29d', '#fbcea0', '#ffa3a3', '#d2afea'];
+	var rainbowAnim = RColor.animate(steps, { duration: 49000, iterations: Infinity });
+}
+</script>
 </body>
 </html>
