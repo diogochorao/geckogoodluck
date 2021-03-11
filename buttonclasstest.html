@@ -74,8 +74,8 @@
 		animation-fill-mode: forwards;
 	}
 	@keyframes title-entrance {
-		0% {transform: rotate(-133deg); top: 133%;}
-		100% {transform: rotate(0deg); top: 50%;}
+		0% {visibility: visible; transform: rotate(-133deg); top: 133%;}
+		100% {visibility: visible; transform: rotate(0deg); top: 50%;}
 	}
 	.title-color { /* for: .title p */
 		animation-name: title-color;
@@ -168,6 +168,7 @@
 	.title-box {
 		width: 313px;
 		height: 67px;
+		visibility: hidden;
 		border: none;
 		position: absolute;
 		top: 50%;
