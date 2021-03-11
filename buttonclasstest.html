@@ -10,7 +10,6 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,300i,400,400i,500,500i,600,600i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap">
-	<script src="theme-color.js"></script>
 <style>
 			/* GENERAL */
 	html {
@@ -1449,111 +1448,117 @@
 	</div></div>
 
 <script>
+var RColor=function(){function h(a){if(a){var c;(c=b)||(c=document.querySelector('meta[name="theme-color"]'),null==c&&(c=document.createElement("meta"),c.name="theme-color",document.head.appendChild(c)));b=c;b.content=a}else b&&(b.parentNode.removeChild(b),b=null)}function f(){if(g){var a=window.getComputedStyle(d);h(a.backgroundColor);window.requestAnimationFrame(f)}else h(d.style.background)}var b=null,d=document.createElement("div");d.setAttribute("style","visibility: hidden; display: none");window.addEventListener("load",
+function(){document.body.appendChild(d)});var g=0;return{set debug(a){a?d.setAttribute("style","width: 67px; height: 67px; position: fixed; right: 0; top: 0; visibility: hidden; display:none;"):d.setAttribute("style","visibility: hidden; display: none")},set default(a){d.style.background=""+a;f()},animate:function(a,c){a=a.map(function(a){return"string"==typeof a?{background:a}:a});var b=d.animate(a,c);++g;var e=null;b.onfinish=function(){--g;e&&e()};Object.defineProperty(b,"onfinish",{get:function(){return e},set:function(a){e=a}});
+f();return b}}}();
 window.addEventListener("load", startup);
 function startup() {
-   var element = document.getElementById("body");
-   element.classList.add("background-color");
-   var element = document.getElementById("more-back-cover");
-   element.classList.add("background-color");
-   var element = document.getElementById("e-divider-1");
-   element.classList.add("background-color");
-   var element = document.getElementById("e-divider-2");
-   element.classList.add("background-color");
-   var element = document.getElementById("title-box");
-   element.classList.add("title-entrance");
-   var element = document.getElementById("title-p");
-   element.classList.add("title-color");
-   var element = document.getElementById("title-click-top");
-   element.classList.add("title-click-top-entrance");
-   var element = document.getElementById("spotify");
-   element.classList.add("spotify-entrance");
-   var element = document.getElementById("youtube");
-   element.classList.add("youtube-entrance");
-   var element = document.getElementById("everywhere");
-   element.classList.add("everywhere-entrance");
-   var element = document.getElementById("instagram");
-   element.classList.add("instagram-entrance");
-   var element = document.getElementById("contact");
-   element.classList.add("contact-entrance");
-   var element = document.getElementById("more-box");
-   element.classList.add("more-box-entrance");
+	RColor.debug = true;
+	var steps = ['#d2afea', '#87b3e6', '#addfee', '#bce3bc', '#e4e29d', '#fbcea0', '#ffa3a3', '#d2afea'];
+	var rainbowAnim = RColor.animate(steps, { duration: 49000, iterations: Infinity });
+	var element = document.getElementById("body");
+	element.classList.add("background-color");
+	var element = document.getElementById("more-back-cover");
+	element.classList.add("background-color");
+	var element = document.getElementById("e-divider-1");
+	element.classList.add("background-color");
+	var element = document.getElementById("e-divider-2");
+	element.classList.add("background-color");
+	var element = document.getElementById("title-box");
+	element.classList.add("title-entrance");
+	var element = document.getElementById("title-p");
+	element.classList.add("title-color");
+	var element = document.getElementById("title-click-top");
+	element.classList.add("title-click-top-entrance");
+	var element = document.getElementById("spotify");
+	element.classList.add("spotify-entrance");
+	var element = document.getElementById("youtube");
+	element.classList.add("youtube-entrance");
+	var element = document.getElementById("everywhere");
+	element.classList.add("everywhere-entrance");
+	var element = document.getElementById("instagram");
+	element.classList.add("instagram-entrance");
+	var element = document.getElementById("contact");
+	element.classList.add("contact-entrance");
+	var element = document.getElementById("more-box");
+	element.classList.add("more-box-entrance");
 }
 function geckoreveal() {
-   var element = document.getElementById("everywhere-gr-click-top");
-   element.classList.add("gr-everywhere-gr-click-top");
-   var element = document.getElementById("title");
-   element.classList.add("gecko-reveal");
-   element.addEventListener("animationend", geckorevealreset);
+	var element = document.getElementById("everywhere-gr-click-top");
+	element.classList.add("gr-everywhere-gr-click-top");
+	var element = document.getElementById("title");
+	element.classList.add("gecko-reveal");
+	element.addEventListener("animationend", geckorevealreset);
 }
 function geckorevealreset() {
-   var element = document.getElementById("everywhere-gr-click-top");
-   element.classList.remove("gr-everywhere-gr-click-top");
-   var element = document.getElementById("title");
-   element.classList.remove("gecko-reveal");
+	var element = document.getElementById("everywhere-gr-click-top");
+	element.classList.remove("gr-everywhere-gr-click-top");
+	var element = document.getElementById("title");
+	element.classList.remove("gecko-reveal");
 }
 function geckorevealeverywheretransition() {
-   var element = document.getElementById("title");
-   element.classList.add("gr-et-title");
+	var element = document.getElementById("title");
+	element.classList.add("gr-et-title");
 }
 function everywheretransition() {
-   var element = document.getElementById("title-box");
-   element.classList.add("et-title-box");
-   var element = document.getElementById("title-click-top");
-   element.classList.add("et-title-click-top");
-   var element = document.getElementById("spotify");
-   element.classList.add("et-upper-buttons");
-   var element = document.getElementById("youtube");
-   element.classList.add("et-upper-buttons");
-   var element = document.getElementById("everywhere");
-   element.classList.add("et-upper-buttons");
-   var element = document.getElementById("instagram");
-   element.classList.add("et-lower-buttons");
-   var element = document.getElementById("contact");
-   element.classList.add("et-lower-buttons");
-   var element = document.getElementById("more-box");
-   element.classList.add("et-lower-buttons");
-   var element = document.getElementById("e-music");
-   element.classList.add("et-e-music");
-   var element = document.getElementById("e-spotify");
-   element.classList.add("et-e-spotify");
-   var element = document.getElementById("e-apple-music");
-   element.classList.add("et-e-apple-music");
-   var element = document.getElementById("e-amazon-music");
-   element.classList.add("et-e-amazon-music");
-   var element = document.getElementById("e-youtube-music");
-   element.classList.add("et-e-youtube-music");
-   var element = document.getElementById("e-soundcloud");
-   element.classList.add("et-e-soundcloud");
-   var element = document.getElementById("e-bandcamp");
-   element.classList.add("et-e-bandcamp");
-   var element = document.getElementById("e-also-everywhere-else");
-   element.classList.add("et-e-also-everywhere-else");
-   var element = document.getElementById("e-divider-1-box");
-   element.classList.add("et-e-divider-1-box");
-   var element = document.getElementById("e-videos");
-   element.classList.add("et-e-videos");
-   var element = document.getElementById("e-youtube");
-   element.classList.add("et-e-youtube");
-   var element = document.getElementById("e-divider-2-box");
-   element.classList.add("et-e-divider-2-box");
-   var element = document.getElementById("e-social-media-contact");
-   element.classList.add("et-e-social-media-contact");
-   var element = document.getElementById("e-instagram");
-   element.classList.add("et-e-instagram");
-   var element = document.getElementById("e-twitter");
-   element.classList.add("et-e-twitter");
-   var element = document.getElementById("e-email");
-   element.classList.add("et-e-email");
-   var element = document.getElementById("e-footer");
-   element.classList.add("et-e-footer");
-   var element = document.getElementById("e-links-background");
-   element.classList.add("et-e-links-background");
-   var element = document.getElementById("e-title-click-top");
-   element.classList.add("et-e-title-click-top");
-   var element = document.getElementById("page");
-   element.classList.add("et-page");
-   var element = document.getElementById("box");
-   element.classList.add("et-box");
+	var element = document.getElementById("title-box");
+	element.classList.add("et-title-box");
+	var element = document.getElementById("title-click-top");
+	element.classList.add("et-title-click-top");
+	var element = document.getElementById("spotify");
+	element.classList.add("et-upper-buttons");
+	var element = document.getElementById("youtube");
+	element.classList.add("et-upper-buttons");
+	var element = document.getElementById("everywhere");
+	element.classList.add("et-upper-buttons");
+	var element = document.getElementById("instagram");
+	element.classList.add("et-lower-buttons");
+	var element = document.getElementById("contact");
+	element.classList.add("et-lower-buttons");
+	var element = document.getElementById("more-box");
+	element.classList.add("et-lower-buttons");
+	var element = document.getElementById("e-music");
+	element.classList.add("et-e-music");
+	var element = document.getElementById("e-spotify");
+	element.classList.add("et-e-spotify");
+	var element = document.getElementById("e-apple-music");
+	element.classList.add("et-e-apple-music");
+	var element = document.getElementById("e-amazon-music");
+	element.classList.add("et-e-amazon-music");
+	var element = document.getElementById("e-youtube-music");
+	element.classList.add("et-e-youtube-music");
+	var element = document.getElementById("e-soundcloud");
+	element.classList.add("et-e-soundcloud");
+	var element = document.getElementById("e-bandcamp");
+	element.classList.add("et-e-bandcamp");
+	var element = document.getElementById("e-also-everywhere-else");
+	element.classList.add("et-e-also-everywhere-else");
+	var element = document.getElementById("e-divider-1-box");
+	element.classList.add("et-e-divider-1-box");
+	var element = document.getElementById("e-videos");
+	element.classList.add("et-e-videos");
+	var element = document.getElementById("e-youtube");
+	element.classList.add("et-e-youtube");
+	var element = document.getElementById("e-divider-2-box");
+	element.classList.add("et-e-divider-2-box");
+	var element = document.getElementById("e-social-media-contact");
+	element.classList.add("et-e-social-media-contact");
+	var element = document.getElementById("e-instagram");
+	element.classList.add("et-e-instagram");
+	var element = document.getElementById("e-twitter");
+	element.classList.add("et-e-twitter");
+	var element = document.getElementById("e-email");
+	element.classList.add("et-e-email");
+	var element = document.getElementById("e-footer");
+	element.classList.add("et-e-footer");
+	var element = document.getElementById("e-links-background");
+	element.classList.add("et-e-links-background");
+	var element = document.getElementById("e-title-click-top");
+	element.classList.add("et-e-title-click-top");
+	var element = document.getElementById("page");
+	element.classList.add("et-page");
+	var element = document.getElementById("box");
+	element.classList.add("et-box");
 }
 </script>
 </body>
