@@ -75,8 +75,9 @@
 		animation-fill-mode: forwards;
 	}
 	@keyframes title-entrance {
-		0% {visibility: visible; transform: rotate(-133deg); top: 133%;}
-		100% {visibility: visible; transform: rotate(0deg); top: 50%;}
+		0% {visibility: visible; pointer-events: none; transform: rotate(-133deg); top: 133%;}
+		99% {pointer-events: none;}
+		100% {visibility: visible; pointer-events: all; transform: rotate(0deg); top: 50%;}
 	}
 	.title-color { /* for: .title p */
 		animation-name: title-color;
@@ -494,9 +495,10 @@
 		animation-fill-mode: forwards;
 	}
 	@keyframes et-title-box {
-		0% {visibility: visible; top: 50%; margin-top: -33.5px;}
-		25% {visibility: visible; top: 50%; margin-top: 25px;}
-		100% {visibility: visible; top: 0%; margin-top: clamp(16px, calc(0.5 * (100vw - 313px)), 34px);}
+		0% {visibility: visible; pointer-events: none; top: 50%; margin-top: -33.5px;}
+		25% {visibility: visible; pointer-events: none; top: 50%; margin-top: 25px;}
+		99% {pointer-events: none;}
+		100% {visibility: visible; pointer-events: all; top: 0%; margin-top: clamp(16px, calc(0.5 * (100vw - 313px)), 34px);}
 	}
 	.et-title-click-top {
 		animation-name: et-title-click-top;
