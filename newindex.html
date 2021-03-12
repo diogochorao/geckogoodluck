@@ -119,7 +119,7 @@
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	.youtube-entrance {
+	.bandcamp-entrance {
 		animation-name: upper-buttons-entrance;
 		animation-delay: 3.3s;
 		animation-duration: 1s;
@@ -127,7 +127,7 @@
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	.everywhere-entrance {
+	.youtube-entrance {
 		animation-name: upper-buttons-entrance;
 		animation-delay: 3.6s;
 		animation-duration: 1s;
@@ -147,7 +147,7 @@
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	.contact-entrance {
+	.everywhere-entrance {
 		animation-name: lower-buttons-entrance;
 		animation-delay: 4.2s;
 		animation-duration: 1s;
@@ -334,14 +334,23 @@
 		margin-left: -156.5px;
 		transform-origin: top center;
 	}
-	#youtube {
+	#bandcamp {
 		margin-top: -75.5px;
 		margin-left: -49.5px;
 	}
-	#everywhere {
+	#youtube {
 		margin-top: -75.5px;
 		margin-left: 57.5px;
 		transform-origin: bottom center;
+	}
+	#instagram {
+		margin-top: 41.5px;
+		margin-left: -156.5px;
+		transform-origin: bottom center;
+	}
+	#everywhere {
+		margin-top: 41.5px;
+		margin-left: -49.5px;
 	}
 	#everywhere p:before {
 		content: '///';
@@ -358,15 +367,6 @@
 	#everywhere:hover p:before {
 		opacity: 1;
 		left: 0;
-	}
-	#instagram {
-		margin-top: 41.5px;
-		margin-left: -156.5px;
-		transform-origin: bottom center;
-	}
-	#contact {
-		margin-top: 41.5px;
-		margin-left: -49.5px;
 	}
 	.more-box {
 		width: 99px;
@@ -474,13 +474,13 @@
 		visibility: visible;
 		margin-top: 42px;
 	}
-	#downloads {
+	#contact {
 		top: 0%;
 		left: 0%;
 		margin-top: 0px;
 		margin-left: 0px;
 	}
-	.more-box:hover #downloads {
+	.more-box:hover #contact {
 		visibility: visible;
 		margin-top: 84px;
 	}
@@ -1405,12 +1405,12 @@
 <body id="body">
 	<div class="page" id="page"><div class="box" id="box">
 		<div class="button" id="spotify"><p>spotify</p></div>
+		<div class="button" id="bandcamp"><p>bandcamp</p></div>
 		<div class="button" id="youtube"><p>youtube</p></div>
-		<div class="button" id="everywhere" onclick="everywheretransition()"><p>everywhere</p><div class="everywhere-gr-click-top" id="everywhere-gr-click-top" onclick="geckorevealeverywheretransition()"></div></div>
 		<div class="button" id="instagram"><p>instagram</p></div>
-		<div class="button" id="contact"><p>contact</p></div>
+		<div class="button" id="everywhere" onclick="everywheretransition()"><p>everywhere</p><div class="everywhere-gr-click-top" id="everywhere-gr-click-top" onclick="geckorevealeverywheretransition()"></div></div>
 		<div class="more-box" id="more-box">
-			<div class="button" id="downloads"><p>downloads</p></div>
+			<div class="button" id="contact"><p>contact</p></div>
 			<div class="button" id="about"><p>about</p></div>
 			<div class="more-back-cover" id="more-back-cover"></div>
 			<div class="more-background">
@@ -1469,14 +1469,14 @@ function startup() {
 	element.classList.add("title-click-top-entrance");
 	var element = document.getElementById("spotify");
 	element.classList.add("spotify-entrance");
+	var element = document.getElementById("bandcamp");
+	element.classList.add("bandcamp-entrance");
 	var element = document.getElementById("youtube");
 	element.classList.add("youtube-entrance");
-	var element = document.getElementById("everywhere");
-	element.classList.add("everywhere-entrance");
 	var element = document.getElementById("instagram");
 	element.classList.add("instagram-entrance");
-	var element = document.getElementById("contact");
-	element.classList.add("contact-entrance");
+	var element = document.getElementById("everywhere");
+	element.classList.add("everywhere-entrance");
 	var element = document.getElementById("more-box");
 	element.classList.add("more-box-entrance");
 }
@@ -1506,13 +1506,13 @@ function everywheretransition() {
 	element.classList.add("et-title-click-top");
 	var element = document.getElementById("spotify");
 	element.classList.add("et-upper-buttons");
-	var element = document.getElementById("youtube");
+	var element = document.getElementById("bandcamp");
 	element.classList.add("et-upper-buttons");
-	var element = document.getElementById("everywhere");
+	var element = document.getElementById("youtube");
 	element.classList.add("et-upper-buttons");
 	var element = document.getElementById("instagram");
 	element.classList.add("et-lower-buttons");
-	var element = document.getElementById("contact");
+	var element = document.getElementById("everywhere");
 	element.classList.add("et-lower-buttons");
 	var element = document.getElementById("more-box");
 	element.classList.add("et-lower-buttons");
