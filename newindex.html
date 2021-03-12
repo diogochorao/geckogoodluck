@@ -203,7 +203,7 @@
 		position: relative;
 		transition: padding-right 0.7s;
 	}
-	.title p:after {
+	.title p::after {
 		content: '///';
 		letter-spacing: 3px;
 		position: absolute;
@@ -215,7 +215,7 @@
 	.title:hover p {
 		padding-right: 43px;
 	}
-	.title:hover p:after {
+	.title:hover p::after {
 		opacity: 1;
 		right: 0;
 	}
@@ -310,7 +310,7 @@
 		position: relative;
 		transition: 0.7s;
 	}
-	.button p:before {
+	.button p::before {
 		content: '///';
 		letter-spacing: 1.5px;
 		position: absolute;
@@ -322,7 +322,7 @@
 	.button:hover p {
 		padding-left: 18px;
 	}
-	.button:hover p:before {
+	.button:hover p::before {
 		opacity: 1;
 		left: 0;
 	}
@@ -353,7 +353,7 @@
 		margin-top: 41.5px;
 		margin-left: -49.5px;
 	}
-	#everywhere p:before {
+	#everywhere p::before {
 		content: '///';
 		letter-spacing: 1.2px;
 		position: absolute;
@@ -365,7 +365,7 @@
 	#everywhere:hover p {
 		padding-left: 16px;
 	}
-	#everywhere:hover p:before {
+	#everywhere:hover p::before {
 		opacity: 1;
 		left: 0;
 	}
