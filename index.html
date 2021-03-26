@@ -55,12 +55,6 @@
 		animation-timing-function: linear;
 		animation-fill-mode: none;
 	}
-	.page:active {
-		opacity: 0;
-	}
-	.page:active ~ .title-box {
-		opacity: 0;
-	}
 	.title-box {
 		width: 313px;
 		height: 67px;
@@ -112,61 +106,9 @@
 		85.68% {color: #ffa3a3;}
 		100% {color: #d2afea;}
 	}
-	.inverted-page {
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, 0.67);
-		position: fixed;
-		overflow-x: hidden;
-		overflow-y: hidden;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.inverted-title-box {
-		width: 313px;
-		height: 67px;
-		border: none;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-top: -33.5px;
-		margin-left: -156.5px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		animation-name: title-entrance;
-		animation-duration: 3s;
-		animation-iteration-count: 1;
-		animation-timing-function: ease-out;
-		animation-fill-mode: forwards;
-	}
-	.inverted-title {
-		width: 100%;
-		height: 100%;
-		border: none;
-		position: absolute;
-		font-size: 34px;
-		color: rgba(0, 0, 0, 0.67);
-		cursor: default;
-		overflow: hidden;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		animation-name: background-color;
-		animation-duration: 49s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		animation-fill-mode: none;
-	}
 </style>
 </head>
 <body>
-	<div class="inverted-page">
-		<div class="inverted-title-box">
-			<div class="inverted-title"><p>gecko good luck <span style="letter-spacing: 3px">///</span></p></div>
-		</div>
-	</div>
 	<div class="page">
 		<div class="title-box">
 			<div class="title"><p>gecko good luck <span style="letter-spacing: 3px">///</span></p></div>
