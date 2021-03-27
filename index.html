@@ -106,12 +106,28 @@
 		85.68% {color: #ffa3a3;}
 		100% {color: #d2afea;}
 	}
+	.title #middle-o {
+		display: inline-block;
+		transform-origin: 49% 59.5%;
+		animation-name: middle-o-spin;
+		animation-duration: 14s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease;
+		animation-fill-mode: none;
+	}
+	@keyframes middle-o-spin {
+		0% {transform: rotate(0deg);}
+		45% {transform: rotate(0deg);}
+		50% {transform: rotate(180deg);}
+		95% {transform: rotate(180deg);}
+		100% {transform: rotate(360deg);}
+	}
 </style>
 </head>
 <body>
 	<div class="page">
 		<div class="title-box">
-			<div class="title"><p>gecko good luck <span style="letter-spacing: 3px">///</span></p></div>
+			<div class="title"><p>gecko g<span id="middle-o">o</span>od luck <span style="letter-spacing: 3px">///</span></p></div>
 		</div>
 	</div>
 <script>
